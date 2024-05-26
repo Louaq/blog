@@ -11,6 +11,17 @@ export default defineConfig({
     logo: '/b.jpg',
     nav: nav,
     sidebar: sidebar,
+	lastUpdated: {
+	  text: '最后更新于',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'short'
+      }
+	},
+	editLink: {
+      pattern: 'https://github.com/Louaq/blog/tree/main/docs/:path',
+      text: '在github上编辑此页面'
+    },
 	outline:{
 		level: [2, 6],
 		label: '目录'
