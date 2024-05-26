@@ -4,28 +4,28 @@ export const sidebar: DefaultTheme.Sidebar = {
   '/column/Algorithm/': [
      // 第一部分
     {
-      text: '栈和队列',
+      text: '论文指导',
       items: [
         {
-          text: '栈-深拷贝和浅拷贝',
+          text: '环境安装',
           link: '/column/Algorithm/001_Stack'
         },
         {
-          text: '队列-事件循环',
+          text: '模型训练',
           link: '/column/Algorithm/002_Queue'
         }
       ]
     },
     // 第二部分
     {
-      text: '字典和树',
+      text: '结果分析',
       items: [
         {
-          text: '字典和集合-Set和Map',
+          text: '测试',
           link: '/column/Algorithm/003_Dictionary'
         },
         {
-          text: '树-深/广度优先遍历',
+          text: '真实图像预测',
           link: '/column/Algorithm/004_Tree'
         }
       ]

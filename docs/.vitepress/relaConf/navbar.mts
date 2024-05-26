@@ -18,10 +18,10 @@ export const nav: DefaultTheme.NavItem[] = [
     ]
   },
   {
-    text: '前端开发',
+    text: '毕业设计',
     items: [
       {
-        text: '数据结构与算法',
+        text: '毕业设计说明文档',
         link: '/column/Algorithm/' // 对应docs/column/Algorithm下的idnex.md文件
       }
     ]
@@ -29,15 +29,7 @@ export const nav: DefaultTheme.NavItem[] = [
   {
     text: '关于我',
     items: [
-      { text: 'Github', link: 'https://github.com/Jacqueline712' },
-      {
-        text: '掘金',
-        link: 'https://juejin.cn/user/3131845139247960/posts'
-      },
-      {
-        text: '飞书社区',
-        link: 'https://pzfqk98jn1.feishu.cn/wiki/space/7193915595975491587?ccm_open_type=lark_wiki_spaceLink'
-      }
+      { text: 'Github', link: 'https://github.com/Louaq' }
     ]
   }
 ];

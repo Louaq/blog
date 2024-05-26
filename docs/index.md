@@ -6,7 +6,7 @@ home: true
 
 # 官方文档相关配置：https://vitepress.dev/reference/default-theme-home-page
 title: 我的博客
-titleTemplate: Hi，终于等到你
+titleTemplate: Hi，终于等到你，还好没放弃
 editLink: true
 lastUpdated: true
 
@@ -31,7 +31,7 @@ hero:
 features:
   - icon: 🤹♀️
     title: Web前端
-    details: 大厂程序媛，国内某互联网厂搬砖。
+    details: 大厂程序猿，国内某互联网厂搬砖。
     link: /column/views/guide
   - icon: 👩🎨
     title: 喜欢美学
