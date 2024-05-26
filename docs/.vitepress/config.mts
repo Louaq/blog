@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 import { nav } from './relaConf/navbar.mts';
-import { sidebar } from './relaConf/sidebar.mts';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/blog/',
@@ -10,7 +9,69 @@ export default defineConfig({
   themeConfig: {
     logo: '/b.jpg',
     nav: nav,
-    sidebar: sidebar,
+    sidebar: {
+	  '/column/Algorithm/': [
+     // 第一部分
+    {
+      text: '论文指导',
+      items: [
+        {
+          text: '环境安装',
+          link: '/column/Algorithm/Stack'
+        },
+        {
+          text: '模型训练',
+          link: '/column/Algorithm/Queue'
+        }
+      ]
+    },
+    // 第二部分
+    {
+      text: '结果分析',
+      items: [
+        {
+          text: '测试',
+          link: '/column/Algorithm/Dictionary'
+        },
+        {
+          text: '真实图像预测',
+          link: '/column/Algorithm/Tree'
+        }
+      ]
+    }
+  ],
+  '/column/Writing/': [
+     // 第一部分
+    {
+      text: '第一部分',
+      items: [
+        {
+          text: '摘要',
+          link: '/column/Writing/Abstract'
+        },
+        {
+          text: '介绍',
+          link: '/column/Writing/Introduction'
+        }
+      ]
+    },
+    // 第二部分
+    {
+      text: '第二部分',
+      items: [
+        {
+          text: '实验',
+          link: '/column/Writing/Experiment'
+        },
+        {
+          text: '结果',
+          link: '/column/Writing/Results'
+        }
+      ]
+    }
+  ]
+},
+
 	lastUpdated: {
 	  text: '最后更新于',
       formatOptions: {

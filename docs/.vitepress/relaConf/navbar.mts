@@ -23,6 +23,10 @@ export const nav: DefaultTheme.NavItem[] = [
       {
         text: '毕业设计说明文档',
         link: '/column/Algorithm/' // 对应docs/column/Algorithm下的idnex.md文件
+      },
+	  {
+        text: '论文写作思路',
+        link: '/column/Writing/' // 对应docs/column/Algorithm下的idnex.md文件
       }
     ]
   },
