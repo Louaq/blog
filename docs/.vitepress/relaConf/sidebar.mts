@@ -8,11 +8,11 @@ export const sidebar: DefaultTheme.Sidebar = {
       items: [
         {
           text: '环境安装',
-          link: '/column/Algorithm/001_Stack'
+          link: '/column/Algorithm/Stack'
         },
         {
           text: '模型训练',
-          link: '/column/Algorithm/002_Queue'
+          link: '/column/Algorithm/Queue'
         }
       ]
     },
@@ -22,11 +22,11 @@ export const sidebar: DefaultTheme.Sidebar = {
       items: [
         {
           text: '测试',
-          link: '/column/Algorithm/003_Dictionary'
+          link: '/column/Algorithm/Dictionary'
         },
         {
           text: '真实图像预测',
-          link: '/column/Algorithm/004_Tree'
+          link: '/column/Algorithm/Tree'
         }
       ]
     }
