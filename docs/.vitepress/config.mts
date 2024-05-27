@@ -3,7 +3,7 @@ import { nav } from './relaConf/navbar.mts';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/blog/',
-  title: "lab-demo",
+  title: "lab blog",
   description: "A VitePress Site",
   server:{ host: '127.0.0.1', port: 3000 },
   themeConfig: {
@@ -90,6 +90,10 @@ export default defineConfig({
 	search: {
 		provider: 'local'
 	},
+	footer: {
+      message: 'Released under the <a href="https://github.com/vuejs/vitepress/blob/main/LICENSE">MIT License</a>.',
+      copyright: 'Copyright © 2019-present <a href="https://github.com/yyx990803">Evan You</a>'
+    },
 	i18nRouting: true,
 
     socialLinks: [

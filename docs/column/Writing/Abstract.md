@@ -1,4 +1,4 @@
-# 摘要
+# 摘要<Badge type="danger" text="caution" />
 
 > 这篇文档主要介绍毕业论文的写作思路
 
