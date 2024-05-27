@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { nav } from './relaConf/navbar.mts';
+import timeline from "vitepress-markdown-timeline";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/blog/',
@@ -94,6 +95,13 @@ export default defineConfig({
       message: 'Released under the <a href="https://github.com/vuejs/vitepress/blob/main/LICENSE">MIT License</a>.',
       copyright: 'Copyright © 2019-present <a href="https://github.com/yyx990803">Evan You</a>'
     },
+	markdown: { 
+    
+    lineNumbers: true, 
+    config: (md) => {
+      md.use(timeline);
+      },
+    }, 
 	i18nRouting: true,
 
     socialLinks: [

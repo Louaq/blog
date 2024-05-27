@@ -8,9 +8,18 @@ importers:
 
   .:
     devDependencies:
+      medium-zoom:
+        specifier: ^1.1.0
+        version: 1.1.0
       vitepress:
         specifier: ^1.2.2
         version: 1.2.2(@algolia/client-search@4.23.3)(postcss@8.4.38)(search-insights@2.14.0)
+      vitepress-markdown-timeline:
+        specifier: ^1.2.1
+        version: 1.2.1
+      vitepress-theme-website:
+        specifier: ^1.0.8
+        version: 1.0.8
 
 packages:
 
@@ -458,11 +467,25 @@ packages:
   '@vueuse/shared@10.9.0':
     resolution: {integrity: sha512-Uud2IWncmAfJvRaFYzv5OHDli+FbOzxiVEQdLCKQKLyhz94PIyFC3CHcH7EDMwIn8NPtD06+PNbC/PiO0LGLtw==}
 
+  '@waline/api@1.0.0-alpha.7':
+    resolution: {integrity: sha512-IcMah3Li+ueS2Wr0Odd9Ri/PPh1ePOdHLE4CAw1KZNPgNTeLw0lFak/+B4ttVZuW8eFq7DTSmxoUFHGLhi8WoQ==}
+    engines: {node: '>=18'}
+
+  '@waline/client@3.2.0':
+    resolution: {integrity: sha512-Wir+w7NX08XyO/iblThnwD4KyjsLwyneJsEYjEqVx4rfzuL49xnXYoqFkjeT0Wbbb9dxtGKMUa/gsg3HUPJouQ==}
+    engines: {node: '>=18'}
+
   algoliasearch@4.23.3:
     resolution: {integrity: sha512-Le/3YgNvjW9zxIQMRhUHuhiUjAlKY/zsdZpfq4dlLqg6mEm0nL6yk+7f2hDOtLpxsgE4jSzDmvHL7nXdBp5feg==}
 
+  autosize@6.0.1:
+    resolution: {integrity: sha512-f86EjiUKE6Xvczc4ioP1JBlWG7FKrE13qe/DxBCpe8GCipCq2nFw73aO8QEBKHfSbYGDN5eB9jXWKen7tspDqQ==}
+
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
+
+  dayjs@1.11.11:
+    resolution: {integrity: sha512-okzr3f11N6WuqYtZSvm+F776mB41wRZMhKP+hc34YdW+KmtYYK9iqvHSwo2k9FEH3fhGXvOPV6yz2IcSrfRUDg==}
 
   entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
@@ -493,6 +516,19 @@ packages:
   mark.js@8.11.1:
     resolution: {integrity: sha512-1I+1qpDt4idfgLQG+BNWmrqku+7/2bi5nLf4YwF8y8zXvmfiTBY3PV3ZibfrjBueCByROpuBjLLFCajqkgYoLQ==}
 
+  marked-highlight@2.1.1:
+    resolution: {integrity: sha512-ktdqwtBne8rim5mb+vvZ9FzElGFb+CHCgkx/g6DSzTjaSrVnxsJdSzB5YgCkknFrcOW+viocM1lGyIjC0oa3fg==}
+    peerDependencies:
+      marked: '>=4 <13'
+
+  marked@12.0.2:
+    resolution: {integrity: sha512-qXUm7e/YKFoqFPYPa3Ukg9xlI5cyAtGmyEIzMfW//m6kXwCy2Ps9DYf5ioijFKQ8qyuscrHoY04iJGctu2Kg0Q==}
+    engines: {node: '>= 18'}
+    hasBin: true
+
+  medium-zoom@1.1.0:
+    resolution: {integrity: sha512-ewyDsp7k4InCUp3jRmwHBRFGyjBimKps/AJLjRSox+2q/2H4p/PNpQf+pwONWlJiOudkBXtbdmVbFjqyybfTmQ==}
+
   minisearch@6.3.0:
     resolution: {integrity: sha512-ihFnidEeU8iXzcVHy74dhkxh/dn8Dc08ERl0xwoMMGqp4+LvRSCgicb+zGqWthVokQKvCSxITlh3P08OzdTYCQ==}
 
@@ -516,6 +552,9 @@ packages:
 
   preact@10.22.0:
     resolution: {integrity: sha512-RRurnSjJPj4rp5K6XoP45Ui33ncb7e4H7WiOHVpjbkvqvA3U+N8Z6Qbo0AE6leGYBV66n8EhEaFixvIu3SkxFw==}
+
+  recaptcha-v3@1.10.0:
+    resolution: {integrity: sha512-aGTxYSk3FFNKnXeKDbLpgRDRyIHRZNBF5HyaXXAN1Aj4TSyyZvmoAn9CylvpqLV3pYpIQavwc+2rzhNFn5SsLQ==}
 
   rfdc@1.3.1:
     resolution: {integrity: sha512-r5a3l5HzYlIC68TpmYKlxWjmOP6wiPJ1vWv2HeLhNsRZMrCkxeqxiHlQ21oXmQ4F3SiryXBHhAD7JZqvOJjFmg==}
@@ -573,6 +612,13 @@ packages:
         optional: true
       terser:
         optional: true
+
+  vitepress-markdown-timeline@1.2.1:
+    resolution: {integrity: sha512-XPYl/btTcTzW+XF20ITB51L8jPjbS72tSKPcv/CHJgM+3LbBvW8Az/X7RcBTJSXDNOwCY5mGkjA7CXQtuxOKgw==}
+
+  vitepress-theme-website@1.0.8:
+    resolution: {integrity: sha512-2SZwFRHkuEKrdI4+equMZzEacWOH7QSR56/rtSs/zoQ15Qtv4ZnjQ9N8NYgAqcljwK/cJ/velul809Re8n4neg==}
+    engines: {node: '>=16.0.0'}
 
   vitepress@1.2.2:
     resolution: {integrity: sha512-uZ3nXR5NY4nYj3RJWCo5jev9qlNZAQo5SUXu1U0QSUx84cUm/o7hCTDVjZ4njVSVui+PsV1oAbdQOg8ygbaf4w==}
@@ -994,6 +1040,21 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
+  '@waline/api@1.0.0-alpha.7': {}
+
+  '@waline/client@3.2.0':
+    dependencies:
+      '@vueuse/core': 10.9.0(vue@3.4.27)
+      '@waline/api': 1.0.0-alpha.7
+      autosize: 6.0.1
+      marked: 12.0.2
+      marked-highlight: 2.1.1(marked@12.0.2)
+      recaptcha-v3: 1.10.0
+      vue: 3.4.27
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - typescript
+
   algoliasearch@4.23.3:
     dependencies:
       '@algolia/cache-browser-local-storage': 4.23.3
@@ -1012,7 +1073,11 @@ snapshots:
       '@algolia/requester-node-http': 4.23.3
       '@algolia/transporter': 4.23.3
 
+  autosize@6.0.1: {}
+
   csstype@3.1.3: {}
+
+  dayjs@1.11.11: {}
 
   entities@4.5.0: {}
 
@@ -1059,6 +1124,14 @@ snapshots:
 
   mark.js@8.11.1: {}
 
+  marked-highlight@2.1.1(marked@12.0.2):
+    dependencies:
+      marked: 12.0.2
+
+  marked@12.0.2: {}
+
+  medium-zoom@1.1.0: {}
+
   minisearch@6.3.0: {}
 
   mitt@3.0.1: {}
@@ -1076,6 +1149,8 @@ snapshots:
       source-map-js: 1.2.0
 
   preact@10.22.0: {}
+
+  recaptcha-v3@1.10.0: {}
 
   rfdc@1.3.1: {}
 
@@ -1122,6 +1197,17 @@ snapshots:
       rollup: 4.18.0
     optionalDependencies:
       fsevents: 2.3.3
+
+  vitepress-markdown-timeline@1.2.1:
+    dependencies:
+      dayjs: 1.11.11
+
+  vitepress-theme-website@1.0.8:
+    dependencies:
+      '@waline/client': 3.2.0
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - typescript
 
   vitepress@1.2.2(@algolia/client-search@4.23.3)(postcss@8.4.38)(search-insights@2.14.0):
     dependencies:

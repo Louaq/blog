@@ -13,7 +13,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vitepress": "^1.2.2"
+    "medium-zoom": "^1.1.0",
+    "vitepress": "^1.2.2",
+    "vitepress-markdown-timeline": "^1.2.1",
+    "vitepress-theme-website": "^1.0.8"
   },
   "pnpm": {
     "peerDependencyRules": {
