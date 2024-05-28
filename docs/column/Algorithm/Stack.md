@@ -201,3 +201,46 @@ image_sets=[('2007', 'trainval'), ('2012', 'trainval')],
 > YOLOv8训练
 > yolo detect train data=/hy-tmp/ultralytics/datasets/data.yaml model=/hy-tmp/ultralytics/weights/yolov8n.pt epochs=500 imgsz=640 batch=16 workers=4
 
+
+
+```ts{2-3,5}
+export default defineConfig({
+  lang: 'zh-CN',
+  title: "VitePress",
+  description: "我的vitpress文档教程",
+  titleTemplate: '另起标题覆盖title' ,
+})
+```
+
+
+
+```ts{4}
+export default defineConfig({
+  lang: 'zh-CN',
+  title: "VitePress",
+  description: "我的vitpress文档教程", // [!code focus]
+  titleTemplate: '另起标题覆盖title' ,
+})
+```
+
+```ts{4-5}
+export default defineConfig({
+  lang: 'zh-CN', 
+  title: "VitePress", 
+  description: "我的vitpress文档教程", // [!code --]
+  description: "更详细的vitpress中文文档教程", // [!code ++]
+  titleTemplate: '另起标题覆盖title' ,
+})
+```
+
+```ts{4-5}
+export default defineConfig({
+  lang: 'zh-CN', 
+  title: "VitePress", 
+  description: "我的vitpress文档教程", // [!code error]
+  description: "更详细的vitpress中文文档教程", // [!code warning]
+  titleTemplate: '另起标题覆盖title' ,
+})
+
+```
+

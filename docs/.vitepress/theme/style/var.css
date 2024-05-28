@@ -1,12 +1,12 @@
 /* var.css */
 :root {
-  --vp-c-brand-1: #18794e;
-  --vp-c-brand-2: #299764;
-  --vp-c-brand-3: #30a46c;
+  --vp-c-brand-1: #00b4d8;
+  --vp-c-brand-2: #90e0ef;
+  --vp-c-brand-3: #3a86ff;
 }
 
 .dark {
-  --vp-c-brand-1: #3dd68c;
+  --vp-c-brand-1: #90e0ef;
   --vp-c-brand-2: #30a46c;
   --vp-c-brand-3: #298459;
 }

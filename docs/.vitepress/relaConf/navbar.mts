@@ -14,6 +14,10 @@ export const nav: DefaultTheme.NavItem[] = [
       {
         text: '所思·所想',
         link: '/column/Growing/' // 表示docs/column/Growing/index.md
+      },
+	  {
+        text: '团队',
+        link: '/column/Team/' // 表示docs/column/Growing/index.md
       }
     ]
   },
@@ -33,7 +37,7 @@ export const nav: DefaultTheme.NavItem[] = [
   {
     text: '关于我',
     items: [
-      { text: 'Github', link: 'https://github.com/Louaq' }
+      { text: 'Github', link: 'https://github.com/Louaq' },
     ]
   },
   {

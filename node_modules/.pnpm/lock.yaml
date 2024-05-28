@@ -29,6 +29,9 @@ importers:
       vitepress-theme-website:
         specifier: ^1.0.8
         version: 1.0.8
+      vue:
+        specifier: ^3.4.27
+        version: 3.4.27
 
 packages:
 
