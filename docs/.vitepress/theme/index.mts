@@ -3,11 +3,13 @@ import Mycomponent from "./components/Layout.vue"
 import DefaultTheme from 'vitepress/theme-without-fonts'
 import "vitepress-markdown-timeline/dist/theme/index.css";
 
+import giscusTalk from 'vitepress-plugin-comment-with-giscus';
+import { useData, useRoute } from 'vitepress';
+
 import mediumZoom from 'medium-zoom';
 import { onMounted, watch, nextTick } from 'vue';
 import { useRoute } from 'vitepress';
 import { useLive2d } from 'vitepress-theme-website'
-import { useWaline } from 'vitepress-theme-website'
 import './style/fonts.css'
 import './style/index.css'
 export default {
@@ -47,9 +49,22 @@ export default {
         opacity: 0.8
       }
     });
-	 useWaline({
-      serverURL: 'https://you_url.com'
-    });
+    const { frontmatter } = useData();
+        
+    giscusTalk({
+      repo: 'Louaq/blog', 
+      repoId: 'R_kgDOMAoWzQ',
+      category: 'Announcements', 
+      categoryId: 'DIC_kwDOMAoWzc4Cfpm5', 
+      mapping: 'pathname',
+      inputPosition: 'bottom',
+      lang: 'zh-CN',
+      }, 
+      {
+        frontmatter, route
+      },
+      true
+    );
 
   }
   
