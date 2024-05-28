@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { nav } from './relaConf/navbar.mts';
 import timeline from "vitepress-markdown-timeline";
+import taskLists from 'markdown-it-task-checkbox'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/blog/',
@@ -96,10 +97,16 @@ export default defineConfig({
       copyright: 'Copyright © 2019-present <a href="https://github.com/yyx990803">Evan You</a>'
     },
 	markdown: { 
-    
-    lineNumbers: true, 
     config: (md) => {
       md.use(timeline);
+	  md.use(taskLists, {
+        disabled: true,
+        divWrap: false,
+        divClass: 'checkbox',
+        idPrefix: 'cbx_',
+        ulClass: 'task-list',
+        liClass: 'task-list-item',
+      })
       },
     }, 
 	i18nRouting: true,
