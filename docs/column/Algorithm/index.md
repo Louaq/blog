@@ -2,7 +2,7 @@
 
 ---
 
-# 说明文档
+# 说明文档 
 
 > 这篇文档主要介绍《基于YOLOv8的农田病虫害检测与分析》的代码实现部分，整篇论文的目的主要是改进YOLOv8的网络结构，使其在检测病虫害的精度和实时性上有所提升。接下来，我将介绍如何从零开始搭建起本项目。
 
@@ -40,6 +40,131 @@ B站链接图标：[哔哩哔哩](https://www.bilibili.com/)
     </div>
   </a>
 </div>
+
+
+<details>
+  <summary>点我展开</summary>
+  Markdown默认折叠语法，Vitepress可以使用容器折叠语法，更加美观
+</details>
+
+
+
+::: info
+这是一条信息，info后面的文字可修改
+:::
+
+::: tip 说明
+这是一个提示，tip后面的文字可修改
+:::
+
+::: warning 警告
+这是一条警告，warning后面的文字可修改
+:::
+
+::: danger 危险
+这是一个危险警告，danger后面的文字可修改
+:::
+
+::: details 点我查看
+这是一条详情，details后面的文字可修改
+:::
+
+> [!NOTE]
+> 强调用户在快速浏览文档时也不应忽略的重要信息。
+
+> [!TIP]
+> 有助于用户更顺利达成目标的建议性信息。
+
+> [!IMPORTANT]
+> 对用户达成目标至关重要的信息。
+
+> [!WARNING]
+> 因为可能存在风险，所以需要用户立即关注的关键内容。
+
+> [!CAUTION]
+> 行为可能带来的负面影响。
+
+* VitePress <Badge type="info" text="default" />
+* VitePress <Badge type="tip" text="^1.9.0" />
+* VitePress <Badge type="warning" text="beta" />
+* VitePress <Badge type="danger" text="caution" />
+
+
+
+```ts
+export default defineConfig({
+  lang: 'zh-CN',
+  title: "VitePress",
+  description: "我的vitpress文档教程",
+  titleTemplate: '另起标题覆盖title' ,
+})
+```
+
+```html
+<ul>
+  <li v-for="todo in todos" :key="todo.id">
+    {{ todo.text }}
+  </li>
+</ul>
+
+
+
+```
+
+```ts{2-3,5}
+export default defineConfig({
+  lang: 'zh-CN',
+  title: "VitePress",
+  description: "我的vitpress文档教程",
+  titleTemplate: '另起标题覆盖title' ,
+})
+
+```
+
+```ts{4}
+export default defineConfig({
+  lang: 'zh-CN',
+  title: "VitePress",
+  description: "我的vitpress文档教程", // [!code  focus]
+  titleTemplate: '另起标题覆盖title' ,
+})
+```
+
+
+
+```ts{4-5}
+export default defineConfig({
+  lang: 'zh-CN', 
+  title: "VitePress", 
+  description: "我的vitpress文档教程", // [!code  --]
+  description: "更详细的vitpress中文文档教程", // [!code  ++]
+  titleTemplate: '另起标题覆盖title' ,
+})
+
+
+
+```
+
+:100:             
+
+:taxi:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

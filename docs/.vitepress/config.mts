@@ -108,6 +108,9 @@ export default defineConfig({
         liClass: 'task-list-item',
       })
       },
+	  image: {
+        lazyLoading: true
+      },
     }, 
 	i18nRouting: true,
 

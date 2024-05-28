@@ -35,5 +35,9 @@ export const nav: DefaultTheme.NavItem[] = [
     items: [
       { text: 'Github', link: 'https://github.com/Louaq' }
     ]
+  },
+  {
+    text: 'VitePress',
+    link: 'https://vitepress.dev/zh/' 
   }
 ];
