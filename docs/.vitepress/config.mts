@@ -9,7 +9,7 @@ export default defineConfig({
   description: "A VitePress Site",
   server:{ host: '127.0.0.1', port: 3000 },
   head: [
-    ['link',{ rel: 'icon', href: '../blog/public/logo.png'}],
+    ['link',{ rel: 'icon', href: '/logo.png'}],
 	[
       'link',
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
