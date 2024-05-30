@@ -28,6 +28,24 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://http://localhost:5173/blog/.com',
   },
+  markdown: { 
+    config: (md) => {
+      md.use(timeline);
+	  md.use(taskLists, {
+        disabled: true,
+        divWrap: false,
+        divClass: 'checkbox',
+        idPrefix: 'cbx_',
+        ulClass: 'task-list',
+        liClass: 'task-list-item',
+      });
+	  
+      },
+	  image: {
+        lazyLoading: true
+      },
+	  math: true
+    },
   themeConfig: {
     darkModeSwitchLabel: '深浅模式',
     logo: '/b.jpg',
@@ -35,7 +53,7 @@ export default defineConfig({
 	sidebarMenuLabel:'目录',
 	returnToTopLabel:'返回顶部',
     sidebar: {
-	  '/column/Algorithm/': [
+   '/column/Algorithm/': [
      // 第一部分
     {
       text: '论文指导',
@@ -66,7 +84,7 @@ export default defineConfig({
         }
       ]
     }
-  ],
+   ],
   '/column/Writing/': [
      // 第一部分
     {
@@ -98,8 +116,8 @@ export default defineConfig({
         }
       ]
     }
-  ]
-},
+   ]	
+  },
 
 	lastUpdated: {
 	  text: '最后更新于',
@@ -127,22 +145,7 @@ export default defineConfig({
       message: 'Released under the MIT License.', 
       copyright: 'Copyright © 2019-2024present louaq', 
     },
-	markdown: { 
-    config: (md) => {
-      md.use(timeline);
-	  md.use(taskLists, {
-        disabled: true,
-        divWrap: false,
-        divClass: 'checkbox',
-        idPrefix: 'cbx_',
-        ulClass: 'task-list',
-        liClass: 'task-list-item',
-      })
-      },
-	  image: {
-        lazyLoading: true
-      },
-    }, 
+	 
 	i18nRouting: true,
 
     socialLinks: [

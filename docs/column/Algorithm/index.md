@@ -151,9 +151,32 @@ export default defineConfig({
 
 
 
+When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+
+**Maxwell's equations:**
+
+| equation                                                     | description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| $\nabla \cdot \vec{\mathbf{B}}  = 0$                         | divergence of $\vec{\mathbf{B}}$ is zero                     |
+| $\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t}  = \vec{\mathbf{0}}$ | curl of $\vec{\mathbf{E}}$ is proportional to the rate of change of $\vec{\mathbf{B}}$ |
+| $\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} = \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} = 4 \pi \rho$ | _wha?_                                                       |
+
+::: timeline 2023-04-24
+- 一个非常棒的开源项目 H5-Dooring 目前 star 3.1k
+  - 开源地址 https://github.com/MrXujiang/h5-Dooring
+  - 基本介绍 http://h5.dooring.cn/doc/zh/guide/
+- 《深入浅出webpack》 http://webpack.wuhaolin.cn/
+:::
+
+::: timeline 2023-04-23
+:::
 
 
 
+- [ ] 吃饭
+- [x] 睡觉
+- [x] 打豆豆
 
 
 
