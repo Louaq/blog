@@ -13,21 +13,11 @@ import {
 
 const members = [
   {
-    avatar: 'https://www.github.com/yyx990803.png',
-    name: 'Evan You',
+    avatar: 'https://s21.ax1x.com/2024/05/31/pk8svjS.png',
+    name: 'Louaq',
     title: 'Creator',
     links: [
-      { icon: 'github', link: 'https://github.com/yyx990803' },
-      { icon: 'twitter', link: 'https://twitter.com/youyuxi' }
-    ],
-  },
-  {
-    avatar: 'https://www.github.com/kiaking.png',
-    name: 'Kia King Ishii',
-    title: 'Developer',
-    links: [
-      { icon: 'github', link: 'https://github.com/kiaking' },
-      { icon: 'twitter', link: 'https://twitter.com/KiaKing85' },
+      { icon: 'github', link: 'https://github.com/Louaq' },
     ],
   },
 ]
@@ -35,6 +25,7 @@ const members = [
 
 <VPTeamPage>
   <VPTeamPageTitle>
+
     <template #title>
       Our Team
     </template>
