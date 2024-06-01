@@ -35,6 +35,19 @@ export const nav: DefaultTheme.NavItem[] = [
     ]
   },
   {
+    text: 'YOLOv8改进',
+    items: [
+      {
+        text: '基础部分',
+        link: '/column/YOLOv8_root/' // 对应docs/column/Algorithm下的idnex.md文件
+      },
+	  {
+        text: '卷积部分',
+        link: '/column/YOLOv8_conv/' // 对应docs/column/Algorithm下的idnex.md文件
+      }
+    ]
+  },
+  {
     text: '关于我',
     items: [
       { text: 'Github', link: 'https://github.com/Louaq' },

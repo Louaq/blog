@@ -116,7 +116,79 @@ export default defineConfig({
         }
       ]
     }
-   ]	
+   ],
+   '/column/YOLOv8_root/': [
+     // 第一部分
+    {
+      text: '第一部分',
+	  collapsed: false,
+      items: [
+        {
+          text: 'YOLOv8简介',
+          link: '/column/YOLOv8_root/article_1'
+        },
+        {
+          text: '恒源云训练数据',
+          link: '/column/YOLOv8_root/article_2'
+        },
+		{
+          text: 'YOLOv8目录结构',
+          link: '/column/YOLOv8_root/article_3'
+        },
+		{
+          text: 'YOLOv8网络结构分析',
+          link: '/column/YOLOv8_root/article_4'
+        },
+		{
+          text: 'YOLOv8可视化热力图',
+          link: '/column/YOLOv8_root/article_5'
+        },
+		{
+          text: 'YOLOv8参数分析',
+          link: '/column/YOLOv8_root/article_6'
+        },
+		{
+          text: '改进YOLOv8',
+          link: '/column/YOLOv8_root/article_7'
+        }
+      ]
+    },
+    // 第二部分
+    {
+      text: '第二部分',
+	  collapsed: false,
+      items: [
+        {
+          text: 'Roboflow',
+          link: '/column/YOLOv8_root/article_8'
+        },
+        {
+          text: '数据增强',
+          link: '/column/YOLOv8_root/article_9'
+        },
+		{
+          text: '可视化热力图',
+          link: '/column/YOLOv8_root/article_10'
+        },
+		{
+          text: '评估指标',
+          link: '/column/YOLOv8_root/article_11'
+        },
+		{
+          text: 'YOLOv8绘图功能',
+          link: '/column/YOLOv8_root/article_12'
+        },
+		{
+          text: '自定义数据集',
+          link: '/column/YOLOv8_root/article_13'
+        },
+		{
+          text: '报错',
+          link: '/column/YOLOv8_root/article_14'
+        }
+      ]
+    }
+   ]   
   },
 
 	lastUpdated: {
