@@ -188,6 +188,50 @@ export default defineConfig({
         }
       ]
     }
+   ],
+   '/column/YOLOv8_conv/': [
+     // 第一部分
+    {
+      text: '第一部分',
+	  collapsed: false,
+      items: [
+        {
+          text: 'ACKconv',
+          link: '/column/YOLOv8_conv/article_1'
+        },
+        {
+          text: 'DWRSeg',
+          link: '/column/YOLOv8_conv/article_2'
+        },
+		{
+          text: 'SPD-Conv空间深度转换卷积',
+          link: '/column/YOLOv8_conv/article_3'
+        },
+		{
+          text: 'CG block',
+          link: '/column/YOLOv8_conv/article_4'
+        },
+		{
+          text: 'Diverse Branch Block多元分支模块',
+          link: '/column/YOLOv8_conv/article_5'
+        },
+		{
+          text: 'RFAConv注意力机制',
+          link: '/column/YOLOv8_conv/article_6'
+        },
+		{
+          text: 'SCConv空间和通道重构卷积',
+          link: '/column/YOLOv8_conv/article_7'
+        }
+      ]
+    },
+	{
+	  text: '第二部分',
+	  collapsed: false,
+	
+	
+	
+	}
    ]   
   },
 
