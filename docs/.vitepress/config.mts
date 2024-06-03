@@ -258,6 +258,44 @@ export default defineConfig({
           link: '/column/YOLOv8_conv/article_14'
         }
       ]
+	},
+	{
+	  text: '第三部分',
+	  collapsed: false,
+	  items: [
+        {
+          text: 'DynamicConv',
+          link: '/column/YOLOv8_conv/article_15'
+        },
+        {
+          text: 'CSPHet',
+          link: '/column/YOLOv8_conv/article_16'
+        },
+		{
+          text: 'Haar小波的下采样HWD替换传统下采样',
+          link: '/column/YOLOv8_conv/article_17'
+        },
+		{
+          text: '轻量化的C2f',
+          link: '/column/YOLOv8_conv/article_18'
+        },
+		{
+          text: 'FasterBlock',
+          link: '/column/YOLOv8_conv/article_19'
+        },
+		{
+          text: 'GELAN',
+          link: '/column/YOLOv8_conv/article_20'
+        },
+		{
+          text: 'CSPPC',
+          link: '/column/YOLOv8_conv/article_21'
+        },
+		{
+          text: 'ADown模块',
+          link: '/column/YOLOv8_conv/article_22'
+        }
+      ]
 	}
    ]   
   },
