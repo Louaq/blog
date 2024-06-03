@@ -43,7 +43,8 @@ export default defineConfig({
 	  image: {
         lazyLoading: true
       },
-	  math: true
+	  math: true,
+	  lineNumbers: true
     },
   themeConfig: {
     darkModeSwitchLabel: '深浅模式',
@@ -227,9 +228,36 @@ export default defineConfig({
 	{
 	  text: '第二部分',
 	  collapsed: false,
-	
-	
-	
+	  items: [
+        {
+          text: 'DCNV4',
+          link: '/column/YOLOv8_conv/article_8'
+        },
+        {
+          text: 'MSBlock',
+          link: '/column/YOLOv8_conv/article_9'
+        },
+		{
+          text: 'OREPA',
+          link: '/column/YOLOv8_conv/article_10'
+        },
+		{
+          text: 'ODConv',
+          link: '/column/YOLOv8_conv/article_11'
+        },
+		{
+          text: 'SAC',
+          link: '/column/YOLOv8_conv/article_12'
+        },
+		{
+          text: '动态蛇形卷积',
+          link: '/column/YOLOv8_conv/article_13'
+        },
+		{
+          text: '多个位置替换可变形卷积',
+          link: '/column/YOLOv8_conv/article_14'
+        }
+      ]
 	}
    ]   
   },
