@@ -35,7 +35,7 @@ export const nav: DefaultTheme.NavItem[] = [
     ]
   },
   {
-    text: 'YOLOv8改进',
+    text: '🍉YOLOv8改进',
     items: [
       {
         text: '基础部分',
