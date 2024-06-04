@@ -1,58 +1,24 @@
- 
+ # DAT
 
 一、本文介绍
 ------
 
-本文给大家带来的是YOLOv8改进**DAT(Vision Transformer with Deformable Attention)**的教程，其发布于2022年[CVPR2022](https://so.csdn.net/so/search?q=CVPR2022&spm=1001.2101.3001.7020)上同时被评选为**Best Paper，**由此可以证明其是一种十分[有效的](https://so.csdn.net/so/search?q=%E6%9C%89%E6%95%88%E7%9A%84&spm=1001.2101.3001.7020)改进机制，其主要的**核心思想是：**引入可变形注意力机制和动态采样点(听着是不是和可变形动态卷积DCN挺相似)。**同时在网络结构中引入一个DAT计算量由8.9GFLOPs涨到了9.4GFLOPs**。本文的讲解主要包含三方面：DAT的网络结构思想、DAttention的代码复现，如何添加DAttention到你的结构中实现涨点，下面先来分享我测试的对比图**(因为资源有限，我只用了100张图片的数据集进行了100个epoch的训练，虽然这个实验不能产生确定性的结论，但是可以作为一个参考)。**
+本文给大家带来的是YOLOv8改进**DAT**(**Vision Transformer with Deformable Attention**)的教程，其发布于2022年CVPR2022上同时被评选为Best Paper，由此可以证明其是一种十分有效的改进机制，其主要的核心思想是：**引入可变形注意力机制和动态采样点(听着是不是和可变形动态卷积DCN挺相似)**。同时在网络结构中引入一个DAT计算量由8.9GFLOPs涨到了9.4GFLOPs。本文的讲解主要包含三方面：DAT的网络结构思想、DAttention的代码复现，如何添加DAttention到你的结构中实现涨点，下面先来分享我测试的对比图(因为资源有限，我只用了100张图片的数据集进行了100个epoch的训练，虽然这个实验不能产生确定性的结论，但是可以作为一个参考)。
 
-![](https://img-blog.csdnimg.cn/c79f15358c3c4d12b512a652666f4aa1.png)
-
-**适用检测对象->****各种检测目标都可以使用，并不针对于某一特定的目标有效。**
-
-> **专栏目录：******[YOLOv8改进有效系列目录 | 包含卷积、主干、检测头、注意力机制、Neck上百种创新机制](https://snu77.blog.csdn.net/article/details/135309007 "YOLOv8改进有效系列目录 | 包含卷积、主干、检测头、注意力机制、Neck上百种创新机制")********
-
-> **专栏回顾：******************************************************************[YOLOv8改进系列专栏——本专栏持续复习各种顶会内容——科研必备](https://blog.csdn.net/java1314777/category_12483754.html "YOLOv8改进系列专栏——本专栏持续复习各种顶会内容——科研必备")**************************************************************** 
-
-**目录**
-
-**[一、本文介绍](#t1)**
-
-**[二、DAT的网络结构思想](#t2)**
-
-**[2.1 DAT的主要思想和改进](#t3)**
-
-**[2.2 DAT的网络结构图](#t4)** 
-
-**[2.3 DAT和其他机制的对比](#t5)**
-
-**[三、DAT即插即用的代码块](#t6)**
-
-**[四、添加DAT到你的网络中](#t7)**
-
-**[4.1 DAT的yaml文件和训练过程](#t8)**
-
-**[五、DAT可添加的位置](#t9)**
-
-**[5.1推荐DAT可添加的位置](#t10)** 
-
-**[5.2图示DAT可添加的位置](#t11)** 
-
-**[六、本文总结](#t12)** 
-
-* * *
+![](https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/c79f15358c3c4d12b512a652666f4aa1.png)
 
 二、DAT的网络结构思想
 ------------
 
-![](https://img-blog.csdnimg.cn/2d87d1a9e0ce4517900ffebf21dd5e5d.png)
+![](https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/2d87d1a9e0ce4517900ffebf21dd5e5d.png)
 
-**论文地址： **[DAT论文地址](https://openaccess.thecvf.com/content/CVPR2022/papers/Xia_Vision_Transformer_With_Deformable_Attention_CVPR_2022_paper.pdf "DAT论文地址")****
+**论文地址**： [DAT论文地址](https://openaccess.thecvf.com/content/CVPR2022/papers/Xia_Vision_Transformer_With_Deformable_Attention_CVPR_2022_paper.pdf "DAT论文地址")
 
-**官方地址：**[官方代码的地址](https://github.com/LeapLabTHU/DAT "官方代码的地址")****
+**官方地址**：[官方代码的地址](https://github.com/LeapLabTHU/DAT "官方代码的地址")
 
-**代码地址：****文末有修改了官方代码BUG的代码块复制粘贴即可**
+**代码地址**：文末有修改了官方代码BUG的代码块复制粘贴即可
 
-![](https://img-blog.csdnimg.cn/86d5eb08c3f64ce180b19180de965e98.png)
+![](https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/86d5eb08c3f64ce180b19180de965e98.png)
 
 * * *
 
@@ -65,63 +31,292 @@
 2.  **动态采样点**：在可变形注意力机制中，DAT动态地选择采样点，而不是固定地处理整个图像。这种动态选择机制使得模型可以更加集中地关注于那些对当前任务最重要的区域。
     
 3.  **即插即用**：DAT的设计允许它适应不同的图像大小和内容，使其在多种视觉任务中都能有效工作，如图像分类、对象检测等。
-    
 
-> **总结：**DAT通过引入可变形注意力机制，改进了视觉Transformer的效率和性能，使其在处理复杂的视觉任务时更加高效和准确。
+> **总结**：DAT通过引入可变形注意力机制，改进了视觉Transformer的效率和性能，使其在处理复杂的视觉任务时更加高效和准确。
 
 * * *
 
 ### **2.2 DAT的网络结构图** 
 
-![](https://img-blog.csdnimg.cn/788dfa46625d43c2b5a2ea6c1bd0edd1.png)
+![](https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/788dfa46625d43c2b5a2ea6c1bd0edd1.png)
 
 (a) 展示了可变形注意力的信息流。左侧部分，一组参考点均匀地放置在特征图上，这些点的偏移量是由查询通过偏移网络学习得到的。然后，如右侧所示，根据变形点从采样特征中投影出变形的键和值。相对位置偏差也通过变形点计算，增强了输出转换特征的多头注意力。为了清晰展示，图中仅显示了4个参考点，但在实际实现中实际上有更多的点。
 
-(b) 展示了偏移生成网络的详细结构，每层输入和输出特征图的大小都有标注**(这个Offset network在网络的代码中需要控制可添加可不添加)。**
+(b) 展示了偏移生成网络的详细结构，每层输入和输出特征图的大小都有标注(**这个Offset network在网络的代码中需要控制可添加可不添加**)。
 
-通过上面的方式产生多种参考点分布在图像上，从而提高检测的效率，**最终的效果图如下->**
+通过上面的方式产生多种参考点分布在图像上，从而提高检测的效率，**最终的效果图如下：**
 
-![](https://img-blog.csdnimg.cn/17fc459e8ba9419cae117fbb881f1542.png)
+![](https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/17fc459e8ba9419cae117fbb881f1542.png)
 
 * * *
 
 ### **2.3 DAT和其他机制的对比**
 
-DAT与其他视觉Transformer模型和CNN模型中的DCN（可变形卷积网络）的对比图如下，突出了它们处理查询的不同方法**(图片展示的很直观，不给大家描述过程了)**：
+DAT与其他视觉Transformer模型和CNN模型中的DCN（可变形卷积网络）的对比图如下，突出了它们处理查询的不同方法(**图片展示的很直观，不给大家描述过程了**)：
 
-![](https://img-blog.csdnimg.cn/231f9c9593d14fc79d0df06d41da562b.png)
-
-* * *
+![](https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/231f9c9593d14fc79d0df06d41da562b.png)
 
 三、DAT即插即用的代码块
 -------------
 
-下面的代码是DAT的网络结构代码，官方的代码中存在许多bug而且参数都未定义，这里我替大家都行了修改而且在使用时无需手动添加任何参数**(但是本文的方法需要按照有参的注意力机制添加但是只是不需要进行传入参数在yaml文件中，ya'm)**，我都设置了通过模型进行了自动计算，使用方法看章节四。
+下面的代码是DAT的网络结构代码，官方的代码中存在许多bug而且参数都未定义，这里我替大家都行了修改而且在使用时无需手动添加任何参数(**但是本文的方法需要按照有参的注意力机制添加但是只是不需要进行传入参数在yaml文件中**)。
 
 ```python
-import numpy as npimport torchimport torch.nn as nnimport torch.nn.functional as Fimport einopsfrom timm.models.layers import to_2tuple, trunc_normal_ class LayerNormProxy(nn.Module):     def __init__(self, dim):        super().__init__()        self.norm = nn.LayerNorm(dim)     def forward(self, x):        x = einops.rearrange(x, 'b c h w -> b h w c')        x = self.norm(x)        return einops.rearrange(x, 'b h w c -> b c h w')  class DAttentionBaseline(nn.Module):     def __init__(            self, q_size=(224,224), kv_size=(224,224), n_heads=8, n_head_channels=32, n_groups=1,            attn_drop=0.0, proj_drop=0.0, stride=1,            offset_range_factor=-1, use_pe=True, dwc_pe=True,            no_off=False, fixed_pe=False, ksize=9, log_cpb=False    ):         super().__init__()        n_head_channels = int(q_size / 8)        q_size = (q_size, q_size)         self.dwc_pe = dwc_pe        self.n_head_channels = n_head_channels        self.scale = self.n_head_channels ** -0.5        self.n_heads = n_heads        self.q_h, self.q_w = q_size        # self.kv_h, self.kv_w = kv_size        self.kv_h, self.kv_w = self.q_h // stride, self.q_w // stride        self.nc = n_head_channels * n_heads        self.n_groups = n_groups        self.n_group_channels = self.nc // self.n_groups        self.n_group_heads = self.n_heads // self.n_groups        self.use_pe = use_pe        self.fixed_pe = fixed_pe        self.no_off = no_off        self.offset_range_factor = offset_range_factor        self.ksize = ksize        self.log_cpb = log_cpb        self.stride = stride        kk = self.ksize        pad_size = kk // 2 if kk != stride else 0          self.conv_offset = nn.Sequential(            nn.Conv2d(self.n_group_channels, self.n_group_channels, kk, stride, pad_size, groups=self.n_group_channels),            LayerNormProxy(self.n_group_channels),            nn.GELU(),            nn.Conv2d(self.n_group_channels, 2, 1, 1, 0, bias=False)        )         if self.no_off:            for m in self.conv_offset.parameters():                m.requires_grad_(False)         self.proj_q = nn.Conv2d(            self.nc, self.nc,            kernel_size=1, stride=1, padding=0        )         self.proj_k = nn.Conv2d(            self.nc, self.nc,            kernel_size=1, stride=1, padding=0)         self.proj_v = nn.Conv2d(            self.nc, self.nc,            kernel_size=1, stride=1, padding=0        )        self.proj_out = nn.Conv2d(            self.nc, self.nc,            kernel_size=1, stride=1, padding=0        )         self.proj_drop = nn.Dropout(proj_drop, inplace=True)        self.attn_drop = nn.Dropout(attn_drop, inplace=True)         if self.use_pe and not self.no_off:            if self.dwc_pe:                self.rpe_table = nn.Conv2d(                    self.nc, self.nc, kernel_size=3, stride=1, padding=1, groups=self.nc)            elif self.fixed_pe:                self.rpe_table = nn.Parameter(                    torch.zeros(self.n_heads, self.q_h * self.q_w, self.kv_h * self.kv_w)                )                trunc_normal_(self.rpe_table, std=0.01)            elif self.log_cpb:                # Borrowed from Swin-V2                self.rpe_table = nn.Sequential(                    nn.Linear(2, 32, bias=True),                    nn.ReLU(inplace=True),                    nn.Linear(32, self.n_group_heads, bias=False)                )            else:                self.rpe_table = nn.Parameter(                    torch.zeros(self.n_heads, self.q_h * 2 - 1, self.q_w * 2 - 1)                )                trunc_normal_(self.rpe_table, std=0.01)        else:            self.rpe_table = None     @torch.no_grad()    def _get_ref_points(self, H_key, W_key, B, dtype, device):         ref_y, ref_x = torch.meshgrid(            torch.linspace(0.5, H_key - 0.5, H_key, dtype=dtype, device=device),            torch.linspace(0.5, W_key - 0.5, W_key, dtype=dtype, device=device),            indexing='ij'        )        ref = torch.stack((ref_y, ref_x), -1)        ref[..., 1].div_(W_key - 1.0).mul_(2.0).sub_(1.0)        ref[..., 0].div_(H_key - 1.0).mul_(2.0).sub_(1.0)        ref = ref[None, ...].expand(B * self.n_groups, -1, -1, -1)  # B * g H W 2         return ref     @torch.no_grad()    def _get_q_grid(self, H, W, B, dtype, device):         ref_y, ref_x = torch.meshgrid(            torch.arange(0, H, dtype=dtype, device=device),            torch.arange(0, W, dtype=dtype, device=device),            indexing='ij'        )        ref = torch.stack((ref_y, ref_x), -1)        ref[..., 1].div_(W - 1.0).mul_(2.0).sub_(1.0)        ref[..., 0].div_(H - 1.0).mul_(2.0).sub_(1.0)        ref = ref[None, ...].expand(B * self.n_groups, -1, -1, -1)  # B * g H W 2         return ref     def forward(self, x):        x = x        B, C, H, W = x.size()        dtype, device = x.dtype, x.device         q = self.proj_q(x)        q_off = einops.rearrange(q, 'b (g c) h w -> (b g) c h w', g=self.n_groups, c=self.n_group_channels)        offset = self.conv_offset(q_off).contiguous()  # B * g 2 Hg Wg        Hk, Wk = offset.size(2), offset.size(3)        n_sample = Hk * Wk         if self.offset_range_factor >= 0 and not self.no_off:            offset_range = torch.tensor([1.0 / (Hk - 1.0), 1.0 / (Wk - 1.0)], device=device).reshape(1, 2, 1, 1)            offset = offset.tanh().mul(offset_range).mul(self.offset_range_factor)         offset = einops.rearrange(offset, 'b p h w -> b h w p')        reference = self._get_ref_points(Hk, Wk, B, dtype, device)         if self.no_off:            offset = offset.fill_(0.0)         if self.offset_range_factor >= 0:            pos = offset + reference        else:            pos = (offset + reference).clamp(-1., +1.)         if self.no_off:            x_sampled = F.avg_pool2d(x, kernel_size=self.stride, stride=self.stride)            assert x_sampled.size(2) == Hk and x_sampled.size(3) == Wk, f"Size is {x_sampled.size()}"        else:            x_sampled = F.grid_sample(                input=x.reshape(B * self.n_groups, self.n_group_channels, H, W),                grid=pos[..., (1, 0)],  # y, x -> x, y                mode='bilinear', align_corners=True)  # B * g, Cg, Hg, Wg         x_sampled = x_sampled.reshape(B, C, 1, n_sample)        # self.proj_k.weight = torch.nn.Parameter(self.proj_k.weight.float())        # self.proj_k.bias = torch.nn.Parameter(self.proj_k.bias.float())        # self.proj_v.weight = torch.nn.Parameter(self.proj_v.weight.float())        # self.proj_v.bias = torch.nn.Parameter(self.proj_v.bias.float())        # 检查权重的数据类型        q = q.reshape(B * self.n_heads, self.n_head_channels, H * W)         k = self.proj_k(x_sampled).reshape(B * self.n_heads, self.n_head_channels, n_sample)        v = self.proj_v(x_sampled).reshape(B * self.n_heads, self.n_head_channels, n_sample)         attn = torch.einsum('b c m, b c n -> b m n', q, k)  # B * h, HW, Ns        attn = attn.mul(self.scale)         if self.use_pe and (not self.no_off):             if self.dwc_pe:                residual_lepe = self.rpe_table(q.reshape(B, C, H, W)).reshape(B * self.n_heads, self.n_head_channels,                                                                              H * W)            elif self.fixed_pe:                rpe_table = self.rpe_table                attn_bias = rpe_table[None, ...].expand(B, -1, -1, -1)                attn = attn + attn_bias.reshape(B * self.n_heads, H * W, n_sample)            elif self.log_cpb:                q_grid = self._get_q_grid(H, W, B, dtype, device)                displacement = (                            q_grid.reshape(B * self.n_groups, H * W, 2).unsqueeze(2) - pos.reshape(B * self.n_groups,                                                                                                   n_sample,                                                                                                   2).unsqueeze(1)).mul(                    4.0)  # d_y, d_x [-8, +8]                displacement = torch.sign(displacement) * torch.log2(torch.abs(displacement) + 1.0) / np.log2(8.0)                attn_bias = self.rpe_table(displacement)  # B * g, H * W, n_sample, h_g                attn = attn + einops.rearrange(attn_bias, 'b m n h -> (b h) m n', h=self.n_group_heads)            else:                rpe_table = self.rpe_table                rpe_bias = rpe_table[None, ...].expand(B, -1, -1, -1)                q_grid = self._get_q_grid(H, W, B, dtype, device)                displacement = (                            q_grid.reshape(B * self.n_groups, H * W, 2).unsqueeze(2) - pos.reshape(B * self.n_groups,                                                                                                   n_sample,                                                                                                   2).unsqueeze(1)).mul(                    0.5)                attn_bias = F.grid_sample(                    input=einops.rearrange(rpe_bias, 'b (g c) h w -> (b g) c h w', c=self.n_group_heads,                                           g=self.n_groups),                    grid=displacement[..., (1, 0)],                    mode='bilinear', align_corners=True)  # B * g, h_g, HW, Ns                 attn_bias = attn_bias.reshape(B * self.n_heads, H * W, n_sample)                attn = attn + attn_bias         attn = F.softmax(attn, dim=2)        attn = self.attn_drop(attn)         out = torch.einsum('b m n, b c n -> b c m', attn, v)         if self.use_pe and self.dwc_pe:            out = out + residual_lepe        out = out.reshape(B, C, H, W)         y = self.proj_drop(self.proj_out(out))        h, w = pos.reshape(B, self.n_groups, Hk, Wk, 2), reference.reshape(B, self.n_groups, Hk, Wk, 2)         return y
+import numpy as np
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import einops
+from timm.models.layers import to_2tuple, trunc_normal_
+ 
+class LayerNormProxy(nn.Module):
+ 
+    def __init__(self, dim):
+        super().__init__()
+        self.norm = nn.LayerNorm(dim)
+ 
+    def forward(self, x):
+        x = einops.rearrange(x, 'b c h w -> b h w c')
+        x = self.norm(x)
+        return einops.rearrange(x, 'b h w c -> b c h w')
+ 
+ 
+class DAttentionBaseline(nn.Module):
+ 
+    def __init__(
+            self, q_size=(224,224), kv_size=(224,224), n_heads=8, n_head_channels=32, n_groups=1,
+            attn_drop=0.0, proj_drop=0.0, stride=1,
+            offset_range_factor=-1, use_pe=True, dwc_pe=True,
+            no_off=False, fixed_pe=False, ksize=9, log_cpb=False
+    ):
+ 
+        super().__init__()
+        n_head_channels = int(q_size / 8)
+        q_size = (q_size, q_size)
+ 
+        self.dwc_pe = dwc_pe
+        self.n_head_channels = n_head_channels
+        self.scale = self.n_head_channels ** -0.5
+        self.n_heads = n_heads
+        self.q_h, self.q_w = q_size
+        # self.kv_h, self.kv_w = kv_size
+        self.kv_h, self.kv_w = self.q_h // stride, self.q_w // stride
+        self.nc = n_head_channels * n_heads
+        self.n_groups = n_groups
+        self.n_group_channels = self.nc // self.n_groups
+        self.n_group_heads = self.n_heads // self.n_groups
+        self.use_pe = use_pe
+        self.fixed_pe = fixed_pe
+        self.no_off = no_off
+        self.offset_range_factor = offset_range_factor
+        self.ksize = ksize
+        self.log_cpb = log_cpb
+        self.stride = stride
+        kk = self.ksize
+        pad_size = kk // 2 if kk != stride else 0
+ 
+ 
+        self.conv_offset = nn.Sequential(
+            nn.Conv2d(self.n_group_channels, self.n_group_channels, kk, stride, pad_size, groups=self.n_group_channels),
+            LayerNormProxy(self.n_group_channels),
+            nn.GELU(),
+            nn.Conv2d(self.n_group_channels, 2, 1, 1, 0, bias=False)
+        )
+ 
+        if self.no_off:
+            for m in self.conv_offset.parameters():
+                m.requires_grad_(False)
+ 
+        self.proj_q = nn.Conv2d(
+            self.nc, self.nc,
+            kernel_size=1, stride=1, padding=0
+        )
+ 
+        self.proj_k = nn.Conv2d(
+            self.nc, self.nc,
+            kernel_size=1, stride=1, padding=0)
+ 
+        self.proj_v = nn.Conv2d(
+            self.nc, self.nc,
+            kernel_size=1, stride=1, padding=0
+        )
+        self.proj_out = nn.Conv2d(
+            self.nc, self.nc,
+            kernel_size=1, stride=1, padding=0
+        )
+ 
+        self.proj_drop = nn.Dropout(proj_drop, inplace=True)
+        self.attn_drop = nn.Dropout(attn_drop, inplace=True)
+ 
+        if self.use_pe and not self.no_off:
+            if self.dwc_pe:
+                self.rpe_table = nn.Conv2d(
+                    self.nc, self.nc, kernel_size=3, stride=1, padding=1, groups=self.nc)
+            elif self.fixed_pe:
+                self.rpe_table = nn.Parameter(
+                    torch.zeros(self.n_heads, self.q_h * self.q_w, self.kv_h * self.kv_w)
+                )
+                trunc_normal_(self.rpe_table, std=0.01)
+            elif self.log_cpb:
+                # Borrowed from Swin-V2
+                self.rpe_table = nn.Sequential(
+                    nn.Linear(2, 32, bias=True),
+                    nn.ReLU(inplace=True),
+                    nn.Linear(32, self.n_group_heads, bias=False)
+                )
+            else:
+                self.rpe_table = nn.Parameter(
+                    torch.zeros(self.n_heads, self.q_h * 2 - 1, self.q_w * 2 - 1)
+                )
+                trunc_normal_(self.rpe_table, std=0.01)
+        else:
+            self.rpe_table = None
+ 
+    @torch.no_grad()
+    def _get_ref_points(self, H_key, W_key, B, dtype, device):
+ 
+        ref_y, ref_x = torch.meshgrid(
+            torch.linspace(0.5, H_key - 0.5, H_key, dtype=dtype, device=device),
+            torch.linspace(0.5, W_key - 0.5, W_key, dtype=dtype, device=device),
+            indexing='ij'
+        )
+        ref = torch.stack((ref_y, ref_x), -1)
+        ref[..., 1].div_(W_key - 1.0).mul_(2.0).sub_(1.0)
+        ref[..., 0].div_(H_key - 1.0).mul_(2.0).sub_(1.0)
+        ref = ref[None, ...].expand(B * self.n_groups, -1, -1, -1)  # B * g H W 2
+ 
+        return ref
+ 
+    @torch.no_grad()
+    def _get_q_grid(self, H, W, B, dtype, device):
+ 
+        ref_y, ref_x = torch.meshgrid(
+            torch.arange(0, H, dtype=dtype, device=device),
+            torch.arange(0, W, dtype=dtype, device=device),
+            indexing='ij'
+        )
+        ref = torch.stack((ref_y, ref_x), -1)
+        ref[..., 1].div_(W - 1.0).mul_(2.0).sub_(1.0)
+        ref[..., 0].div_(H - 1.0).mul_(2.0).sub_(1.0)
+        ref = ref[None, ...].expand(B * self.n_groups, -1, -1, -1)  # B * g H W 2
+ 
+        return ref
+ 
+    def forward(self, x):
+        x = x
+        B, C, H, W = x.size()
+        dtype, device = x.dtype, x.device
+ 
+        q = self.proj_q(x)
+        q_off = einops.rearrange(q, 'b (g c) h w -> (b g) c h w', g=self.n_groups, c=self.n_group_channels)
+        offset = self.conv_offset(q_off).contiguous()  # B * g 2 Hg Wg
+        Hk, Wk = offset.size(2), offset.size(3)
+        n_sample = Hk * Wk
+ 
+        if self.offset_range_factor >= 0 and not self.no_off:
+            offset_range = torch.tensor([1.0 / (Hk - 1.0), 1.0 / (Wk - 1.0)], device=device).reshape(1, 2, 1, 1)
+            offset = offset.tanh().mul(offset_range).mul(self.offset_range_factor)
+ 
+        offset = einops.rearrange(offset, 'b p h w -> b h w p')
+        reference = self._get_ref_points(Hk, Wk, B, dtype, device)
+ 
+        if self.no_off:
+            offset = offset.fill_(0.0)
+ 
+        if self.offset_range_factor >= 0:
+            pos = offset + reference
+        else:
+            pos = (offset + reference).clamp(-1., +1.)
+ 
+        if self.no_off:
+            x_sampled = F.avg_pool2d(x, kernel_size=self.stride, stride=self.stride)
+            assert x_sampled.size(2) == Hk and x_sampled.size(3) == Wk, f"Size is {x_sampled.size()}"
+        else:
+            x_sampled = F.grid_sample(
+                input=x.reshape(B * self.n_groups, self.n_group_channels, H, W),
+                grid=pos[..., (1, 0)],  # y, x -> x, y
+                mode='bilinear', align_corners=True)  # B * g, Cg, Hg, Wg
+ 
+        x_sampled = x_sampled.reshape(B, C, 1, n_sample)
+        # self.proj_k.weight = torch.nn.Parameter(self.proj_k.weight.float())
+        # self.proj_k.bias = torch.nn.Parameter(self.proj_k.bias.float())
+        # self.proj_v.weight = torch.nn.Parameter(self.proj_v.weight.float())
+        # self.proj_v.bias = torch.nn.Parameter(self.proj_v.bias.float())
+        # 检查权重的数据类型
+        q = q.reshape(B * self.n_heads, self.n_head_channels, H * W)
+ 
+        k = self.proj_k(x_sampled).reshape(B * self.n_heads, self.n_head_channels, n_sample)
+        v = self.proj_v(x_sampled).reshape(B * self.n_heads, self.n_head_channels, n_sample)
+ 
+        attn = torch.einsum('b c m, b c n -> b m n', q, k)  # B * h, HW, Ns
+        attn = attn.mul(self.scale)
+ 
+        if self.use_pe and (not self.no_off):
+ 
+            if self.dwc_pe:
+                residual_lepe = self.rpe_table(q.reshape(B, C, H, W)).reshape(B * self.n_heads, self.n_head_channels,
+                                                                              H * W)
+            elif self.fixed_pe:
+                rpe_table = self.rpe_table
+                attn_bias = rpe_table[None, ...].expand(B, -1, -1, -1)
+                attn = attn + attn_bias.reshape(B * self.n_heads, H * W, n_sample)
+            elif self.log_cpb:
+                q_grid = self._get_q_grid(H, W, B, dtype, device)
+                displacement = (
+                            q_grid.reshape(B * self.n_groups, H * W, 2).unsqueeze(2) - pos.reshape(B * self.n_groups,
+                                                                                                   n_sample,
+                                                                                                   2).unsqueeze(1)).mul(
+                    4.0)  # d_y, d_x [-8, +8]
+                displacement = torch.sign(displacement) * torch.log2(torch.abs(displacement) + 1.0) / np.log2(8.0)
+                attn_bias = self.rpe_table(displacement)  # B * g, H * W, n_sample, h_g
+                attn = attn + einops.rearrange(attn_bias, 'b m n h -> (b h) m n', h=self.n_group_heads)
+            else:
+                rpe_table = self.rpe_table
+                rpe_bias = rpe_table[None, ...].expand(B, -1, -1, -1)
+                q_grid = self._get_q_grid(H, W, B, dtype, device)
+                displacement = (
+                            q_grid.reshape(B * self.n_groups, H * W, 2).unsqueeze(2) - pos.reshape(B * self.n_groups,
+                                                                                                   n_sample,
+                                                                                                   2).unsqueeze(1)).mul(
+                    0.5)
+                attn_bias = F.grid_sample(
+                    input=einops.rearrange(rpe_bias, 'b (g c) h w -> (b g) c h w', c=self.n_group_heads,
+                                           g=self.n_groups),
+                    grid=displacement[..., (1, 0)],
+                    mode='bilinear', align_corners=True)  # B * g, h_g, HW, Ns
+ 
+                attn_bias = attn_bias.reshape(B * self.n_heads, H * W, n_sample)
+                attn = attn + attn_bias
+ 
+        attn = F.softmax(attn, dim=2)
+        attn = self.attn_drop(attn)
+ 
+        out = torch.einsum('b m n, b c n -> b c m', attn, v)
+ 
+        if self.use_pe and self.dwc_pe:
+            out = out + residual_lepe
+        out = out.reshape(B, C, H, W)
+ 
+        y = self.proj_drop(self.proj_out(out))
+        h, w = pos.reshape(B, self.n_groups, Hk, Wk, 2), reference.reshape(B, self.n_groups, Hk, Wk, 2)
+ 
+        return y
 ```
-
-* * *
 
 四、添加DAT到你的网络中
 -------------
 
-添加教程这里不再重复介绍、因为专栏内容有许多，添加过程又需要截特别图片会导致文章大家读者也不通顺如果你已经会添加注意力机制了，可以跳过本章节，**如果你还不会，大家可以看我下面的文章，**里面详细的介绍了拿到一个任意机制(C2f、Conv、Bottleneck、Loss、DetectHead)如何添加到你的网络结构中去。
 
-> **添加教程->**[YOLOv8改进 | 如何在网络结构中添加注意力机制、C2f、卷积、Neck、检测头](https://blog.csdn.net/java1314777/article/details/134432710 "YOLOv8改进 | 如何在网络结构中添加注意力机制、C2f、卷积、Neck、检测头")
 
 ### 4.1 DAT的yaml文件和训练过程
 
  下面是DAttention的训练过程和我添加的位置截图。
 
-![](https://img-blog.csdnimg.cn/c3cc6aba31334a138cb489512a9a99d2.png)
+![](https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/c3cc6aba31334a138cb489512a9a99d2.png)
 
 **yaml文件截图如下**
 
-![](https://img-blog.csdnimg.cn/7433751eb87543cea6a925878e91d6aa.png)
-
-* * *
+![](https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/7433751eb87543cea6a925878e91d6aa.png)
 
 五、DAT可添加的位置
 -----------
@@ -143,43 +338,4 @@ DAT可以是一种即插即用的注意力机制，其可以添加的位置有�
 
 ### **5.2图示DAT可添加的位置** 
 
-![](https://img-blog.csdnimg.cn/3efa1bc815b6491db9c4fba4b986936b.png)
-
-* * *
-
-六、本文总结 
--------
-
-到此本文的正式分享内容就结束了，在这里给大家推荐我的YOLOv8改进有效涨点专栏，本专栏目前为新开的平均质量分98分，后期我会根据各种最新的前沿顶会进行论文复现，也会对一些老的改进机制进行补充，**目前本专栏免费阅读(暂时，大家尽早关注不迷路~)**，如果大家觉得本文帮助到你了，订阅本专栏，关注后续更多的更新~
-
-**本专栏其它内容(持续更新)** 
-
-**[YOLOv8改进 | 如何在网络结构中添加注意力机制、C2f、卷积、Neck、检测头](https://blog.csdn.net/java1314777/article/details/134432710 "YOLOv8改进 | 如何在网络结构中添加注意力机制、C2f、卷积、Neck、检测头")**
-
-**[YOLOv8改进 | ODConv附修改后的C2f、Bottleneck模块代码](https://blog.csdn.net/java1314777/article/details/134432299 "YOLOv8改进 | ODConv附修改后的C2f、Bottleneck模块代码")**
-
-**[YOLOv8改进有效涨点系列-＞手把手教你添加动态蛇形卷积(Dynamic Snake Convolution)](https://blog.csdn.net/java1314777/article/details/134139459 "YOLOv8改进有效涨点系列-＞手把手教你添加动态蛇形卷积(Dynamic Snake Convolution)")**
-
-**[YOLOv8性能评估指标-＞mAP、Precision、Recall、FPS、IoU](https://blog.csdn.net/java1314777/article/details/134154676 "YOLOv8性能评估指标-＞mAP、Precision、Recall、FPS、IoU")**
-
-**[YOLOv8改进有效涨点系列-＞适合多种检测场景的BiFormer注意力机制(Bi-level Routing Attention)](https://blog.csdn.net/java1314777/article/details/134154725 "YOLOv8改进有效涨点系列-＞适合多种检测场景的BiFormer注意力机制(Bi-level Routing Attention)")**
-
- **[YOLOv8改进有效涨点系列-＞多位置替换可变形卷积(DCNv1、DCNv2、DCNv3)](https://blog.csdn.net/java1314777/article/details/134193399 "YOLOv8改进有效涨点系列-＞多位置替换可变形卷积(DCNv1、DCNv2、DCNv3)")** 
-
-**[详解YOLOv8网络结构/环境搭建/数据集获取/训练/推理/验证/导出/部署](https://blog.csdn.net/java1314777/article/details/134097996 "详解YOLOv8网络结构/环境搭建/数据集获取/训练/推理/验证/导出/部署")**
-
-**![](https://img-blog.csdnimg.cn/3d51a0611af1442f833362eaf18fbae2.gif)​**
-
-文章知识点与官方知识档案匹配，可进一步学习相关知识
-
-[OpenCV技能树](https://edu.csdn.net/skill/opencv/opencv-a181ede3b8c7487fbcc212796c27ce77?utm_source=csdn_ai_skill_tree_blog)[OpenCV中的深度学习](https://edu.csdn.net/skill/opencv/opencv-a181ede3b8c7487fbcc212796c27ce77?utm_source=csdn_ai_skill_tree_blog)[图像分类](https://edu.csdn.net/skill/opencv/opencv-a181ede3b8c7487fbcc212796c27ce77?utm_source=csdn_ai_skill_tree_blog)26890 人正在系统学习中
-
-![](https://img-blog.csdnimg.cn/2e7f14b9651748c9a17c305b24cffc4c.png)
-
-购买专栏的读者，可加Qq加交流群
-
-![](https://g.csdnimg.cn/extension-box/1.1.6/image/qq.png) QQ名片
-
-![](https://g.csdnimg.cn/extension-box/1.1.6/image/ic_move.png)
-
-本文转自 <https://snu77.blog.csdn.net/article/details/134473627>，如有侵权，请联系删除。
+![](https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/3efa1bc815b6491db9c4fba4b986936b.png)
