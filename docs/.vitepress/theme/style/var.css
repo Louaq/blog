@@ -46,9 +46,9 @@ h1 {
 .vp-doc blockquote {
   border-radius: 5px;
   padding: 10px 16px;
-  background-color: var(--vp-badge-warning-bg);
+  background-color: rgba(142, 150, 170, 0.2);
   position: relative;
-  border-left: 4px solid #e95f59;
+  border-left: 4px solid #299764;
 }
 /* .vitepress/theme/style/var.css */
 
