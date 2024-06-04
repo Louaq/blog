@@ -297,7 +297,66 @@ export default defineConfig({
         }
       ]
 	}
-   ]   
+   ],
+    '/column/YOLOv8_attention/': [
+     // 第一部分
+    {
+      text: '第一部分',
+	  collapsed: false,
+      items: [
+        {
+          text: 'BiFormer',
+          link: '/column/YOLOv8_attention/article_1'
+        },
+        {
+          text: 'Triplet Attention',
+          link: '/column/YOLOv8_attention/article_2'
+        },
+		{
+          text: '多尺度空洞注意力',
+          link: '/column/YOLOv8_attention/article_3'
+        },
+		{
+          text: 'LSKAttention',
+          link: '/column/YOLOv8_attention/article_4'
+        },
+		{
+          text: 'HAttention注意力机制',
+          link: '/column/YOLOv8_attention/article_5'
+        },
+		{
+          text: '聚焦线性注意力',
+          link: '/column/YOLOv8_attention/article_6'
+        },
+		{
+          text: '可变形大核注意力',
+          link: '/column/YOLOv8_attention/article_7'
+        }
+			
+      ]
+    },
+	{
+	   text: '第二部分',
+	   collapsed: false,
+	   items: [
+	     {
+          text: 'DAT',
+          link: '/column/YOLOv8_attention/article_8'
+         },
+		 {
+          text: 'ACmix',
+          link: '/column/YOLOv8_attention/article_9'
+         },
+		 {
+          text: 'RCS-OSA模块',
+          link: '/column/YOLOv8_attention/article_10'
+         }	   
+	   
+	   ]
+	
+	}
+
+   ]  
   },
 
 	lastUpdated: {

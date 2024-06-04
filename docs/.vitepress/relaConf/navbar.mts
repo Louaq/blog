@@ -39,12 +39,16 @@ export const nav: DefaultTheme.NavItem[] = [
     items: [
       {
         text: '基础部分',
-        link: '/column/YOLOv8_root/' // 对应docs/column/Algorithm下的idnex.md文件
+        link: '/column/YOLOv8_root/' 
       },
 	  {
         text: '卷积部分',
-        link: '/column/YOLOv8_conv/' // 对应docs/column/Algorithm下的idnex.md文件
-      }
+        link: '/column/YOLOv8_conv/' 
+      },
+	  {
+	    text: '注意力机制',
+		link: '/column/YOLOv8_attention/'	  
+	  }
     ]
   }
 ];
