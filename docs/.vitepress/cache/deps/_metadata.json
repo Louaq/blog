@@ -1,82 +1,76 @@
 {
-  "hash": "4aeb4712",
-  "configHash": "ed904e2a",
-  "lockfileHash": "718d082b",
-  "browserHash": "29118fae",
+  "hash": "e2b229b7",
+  "configHash": "cb2553ab",
+  "lockfileHash": "8e54384e",
+  "browserHash": "b0d39867",
   "optimized": {
     "vue": {
-      "src": "../../../../node_modules/.pnpm/vue@3.4.27/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "7ec9d958",
+      "fileHash": "e2685039",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
-      "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.2.1_vue@3.4.27/node_modules/@vue/devtools-api/dist/index.js",
+      "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "7355465d",
+      "fileHash": "e468eee0",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
-      "src": "../../../../node_modules/.pnpm/@vueuse+core@10.9.0_vue@3.4.27/node_modules/@vueuse/core/index.mjs",
+      "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "ec807ae8",
+      "fileHash": "4d3f5fcf",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
-      "src": "../../../../node_modules/.pnpm/@vueuse+integrations@10.9.0_focus-trap@7.5.4_vue@3.4.27/node_modules/@vueuse/integrations/useFocusTrap.mjs",
+      "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "2f2ea64e",
+      "fileHash": "1a7db931",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
-      "src": "../../../../node_modules/.pnpm/mark.js@8.11.1/node_modules/mark.js/src/vanilla.js",
+      "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "dfedbd44",
+      "fileHash": "b4cefad2",
       "needsInterop": false
     },
     "vitepress > minisearch": {
-      "src": "../../../../node_modules/.pnpm/minisearch@6.3.0/node_modules/minisearch/dist/es/index.js",
+      "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "ffc2397b",
+      "fileHash": "19c7815c",
       "needsInterop": false
     },
     "vitepress-plugin-comment-with-giscus": {
-      "src": "../../../../node_modules/.pnpm/vitepress-plugin-comment-with-giscus@1.1.15_vue@3.4.27/node_modules/vitepress-plugin-comment-with-giscus/lib/giscus.js",
+      "src": "../../../../node_modules/vitepress-plugin-comment-with-giscus/lib/giscus.js",
       "file": "vitepress-plugin-comment-with-giscus.js",
-      "fileHash": "005a6dbd",
+      "fileHash": "c0b2493e",
       "needsInterop": false
     },
     "medium-zoom": {
-      "src": "../../../../node_modules/.pnpm/medium-zoom@1.1.0/node_modules/medium-zoom/dist/medium-zoom.esm.js",
+      "src": "../../../../node_modules/medium-zoom/dist/medium-zoom.esm.js",
       "file": "medium-zoom.js",
-      "fileHash": "c783fc82",
+      "fileHash": "7907348c",
       "needsInterop": false
     },
     "busuanzi.pure.js": {
-      "src": "../../../../node_modules/.pnpm/busuanzi.pure.js@1.0.3/node_modules/busuanzi.pure.js/index.js",
+      "src": "../../../../node_modules/busuanzi.pure.js/index.js",
       "file": "busuanzi__pure__js.js",
-      "fileHash": "0eb54dff",
+      "fileHash": "649e2756",
       "needsInterop": true
-    },
-    "vitepress-theme-website": {
-      "src": "../../../../node_modules/.pnpm/vitepress-theme-website@1.0.8/node_modules/vitepress-theme-website/dist/index.mjs",
-      "file": "vitepress-theme-website.js",
-      "fileHash": "9ad7418a",
-      "needsInterop": false
     }
   },
   "chunks": {
-    "giscus-aTimukGI-JDYGPDP3": {
-      "file": "giscus-aTimukGI-JDYGPDP3.js"
+    "giscus-aTimukGI-VEKOX2WD": {
+      "file": "giscus-aTimukGI-VEKOX2WD.js"
     },
-    "chunk-BIG7MHHI": {
-      "file": "chunk-BIG7MHHI.js"
+    "chunk-JDJHDILU": {
+      "file": "chunk-JDJHDILU.js"
     },
-    "chunk-D4D2XWKF": {
-      "file": "chunk-D4D2XWKF.js"
+    "chunk-VNJKH7QK": {
+      "file": "chunk-VNJKH7QK.js"
     },
-    "chunk-LEFUMAU3": {
-      "file": "chunk-LEFUMAU3.js"
+    "chunk-Y2F7D3TJ": {
+      "file": "chunk-Y2F7D3TJ.js"
     }
   }
 }
