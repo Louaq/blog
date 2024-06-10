@@ -13,7 +13,7 @@ lastUpdated: true
 hero:
     name: 程序猿
     text: Stay foolish, Stay hungry.
-    tagline: /斜杠青年/人间清醒/工具控/
+    tagline: /最是人间留不住，朱颜辞镜花辞树/
     image:
         # 首页右边的图片
         src: /logo.png
@@ -44,4 +44,14 @@ features:
 
 
 ---
+
+
+
+
+
+
+
+
+
+
 
