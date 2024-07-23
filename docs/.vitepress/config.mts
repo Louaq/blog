@@ -333,7 +333,7 @@ export default defineConfig({
           link: '/column/YOLOv8_attention/article_7'
         }
 			
-      ]
+      ],
     },
 	{
 	   text: '第二部分',
@@ -356,7 +356,31 @@ export default defineConfig({
 	
 	}
 
-   ]  
+   ],
+	'/column/ai/': [
+	{
+		text: '第一部分',
+		collapsed: false,
+		items: [
+			{
+				text: 'Python的基础知识',
+				link: '/column/ai/day01'
+					
+			},
+			{
+				text: '列表',
+				link: '/column/ai/day02'
+					
+			},
+				
+		]
+	
+
+	}
+	  
+	   
+	    
+	]
   },
 
 	lastUpdated: {

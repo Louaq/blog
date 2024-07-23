@@ -50,5 +50,32 @@ export const nav: DefaultTheme.NavItem[] = [
 		link: '/column/YOLOv8_attention/'	  
 	  }
     ]
+  },
+  {
+	text: '💻深度学习和人工智能',
+	items: [
+      {
+        text: 'Python基础',
+        link: '/column/ai/' 
+      },
+	  {
+        text: 'Pytorch',
+        link: '/column/Pytorch/' 
+      },
+	  {
+	    text: '深度学习',
+		link: '/column/deepLearning/'	  
+	  },
+	  {
+		text: '论文阅读',
+		link: '/column/Paper/'
+	  
+	  }
+    ]
+  
+  
+  
+  
+  
   }
 ];
