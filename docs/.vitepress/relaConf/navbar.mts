@@ -16,6 +16,10 @@ export const nav: DefaultTheme.NavItem[] = [
         link: '/column/Growing/' // 表示docs/column/Growing/index.md
       },
 	  {
+        text: 'Gallery',
+        link: '/column/wallpaper/' // 表示docs/column/wallpaper/index.md
+      },
+	  {
         text: '团队',
         link: '/column/Team/' // 表示docs/column/Growing/index.md
       }

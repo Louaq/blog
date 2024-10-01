@@ -371,16 +371,32 @@ export default defineConfig({
 				text: '列表',
 				link: '/column/ai/day02'
 					
-			},
-				
+			},				
 		]
 	
-
 	}
-	  
-	   
-	    
-	]
+	  	    
+	],
+    '/column/wallpaper/': [
+		{
+		text: '第一部分',
+		collapsed: false,
+		items: [
+			{
+				text: 'WLOP_08',
+				link: '/column/wallpaper/wlop_08'
+					
+			},
+			{
+				text: 'WLOP_09',
+				link: '/column/wallpaper/wlop_09'
+					
+			},
+				
+		  ]
+        }
+      ]
+ 
   },
 
 	lastUpdated: {

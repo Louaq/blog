@@ -13,7 +13,7 @@ lastUpdated: true
 hero:
     name: 程序猿
     text: Stay foolish, Stay hungry.
-    tagline: /最是人间留不住，朱颜辞镜花辞树/
+    tagline: The sky is dead, the yellow sky is standing
     image:
         # 首页右边的图片
         src: /logo.png
@@ -34,7 +34,7 @@ features:
     details: 电子信息研究生
   - icon: 👩
     title: 深度学习
-    details: 计算机视觉，YOLO算法
+    details: 计算机视觉，超分辨率
   - icon: 🧩
     title: 热爱编码
     details: 是个平平无奇但是又很热爱学习的青年。
