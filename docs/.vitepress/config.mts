@@ -4,11 +4,11 @@ import timeline from "vitepress-markdown-timeline";
 import taskLists from 'markdown-it-task-checkbox'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/blog/',
+  base: './',
   title: "lab blog",
   description: "A VitePress Site",
   head: [
-    ['link',{ rel: 'icon', href: '/logo.png'}],
+    ['link',{ rel: 'icon', href: '/icon.png'}],
 	[
       'link',
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }

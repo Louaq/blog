@@ -1,76 +1,76 @@
 {
-  "hash": "babcf191",
-  "configHash": "a6ab6edd",
-  "lockfileHash": "d174396f",
-  "browserHash": "d82fd2e9",
+  "hash": "d1016b3e",
+  "configHash": "83c0db1f",
+  "lockfileHash": "05d47b47",
+  "browserHash": "119b3420",
   "optimized": {
     "vue": {
-      "src": "../../../../node_modules/.pnpm/vue@3.4.27/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "4300465b",
+      "fileHash": "3dee84ac",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
-      "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.2.1_vue@3.4.27/node_modules/@vue/devtools-api/dist/index.js",
+      "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "5f067778",
+      "fileHash": "598b0732",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
-      "src": "../../../../node_modules/.pnpm/@vueuse+core@10.9.0_vue@3.4.27/node_modules/@vueuse/core/index.mjs",
+      "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "81b230ec",
+      "fileHash": "58bd780b",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
-      "src": "../../../../node_modules/.pnpm/@vueuse+integrations@10.9.0_focus-trap@7.5.4_vue@3.4.27/node_modules/@vueuse/integrations/useFocusTrap.mjs",
+      "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "201551ac",
+      "fileHash": "ec8d983e",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
-      "src": "../../../../node_modules/.pnpm/mark.js@8.11.1/node_modules/mark.js/src/vanilla.js",
+      "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "8f38c738",
+      "fileHash": "314f2406",
       "needsInterop": false
     },
     "vitepress > minisearch": {
-      "src": "../../../../node_modules/.pnpm/minisearch@6.3.0/node_modules/minisearch/dist/es/index.js",
+      "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "65605dca",
+      "fileHash": "5668bb76",
       "needsInterop": false
     },
     "vitepress-plugin-comment-with-giscus": {
-      "src": "../../../../node_modules/.pnpm/vitepress-plugin-comment-with-giscus@1.1.15_vue@3.4.27/node_modules/vitepress-plugin-comment-with-giscus/lib/giscus.js",
+      "src": "../../../../node_modules/vitepress-plugin-comment-with-giscus/lib/giscus.js",
       "file": "vitepress-plugin-comment-with-giscus.js",
-      "fileHash": "540a0ba9",
+      "fileHash": "1d226759",
       "needsInterop": false
     },
     "medium-zoom": {
-      "src": "../../../../node_modules/.pnpm/medium-zoom@1.1.0/node_modules/medium-zoom/dist/medium-zoom.esm.js",
+      "src": "../../../../node_modules/medium-zoom/dist/medium-zoom.esm.js",
       "file": "medium-zoom.js",
-      "fileHash": "fd443849",
+      "fileHash": "c5a5c005",
       "needsInterop": false
     },
     "busuanzi.pure.js": {
-      "src": "../../../../node_modules/.pnpm/busuanzi.pure.js@1.0.3/node_modules/busuanzi.pure.js/index.js",
+      "src": "../../../../node_modules/busuanzi.pure.js/index.js",
       "file": "busuanzi__pure__js.js",
-      "fileHash": "9b256873",
+      "fileHash": "b140dd3a",
       "needsInterop": true
     }
   },
   "chunks": {
-    "giscus-aTimukGI-GQQQHXBB": {
-      "file": "giscus-aTimukGI-GQQQHXBB.js"
+    "giscus-aTimukGI-AW4UKNQN": {
+      "file": "giscus-aTimukGI-AW4UKNQN.js"
     },
-    "chunk-BIG7MHHI": {
-      "file": "chunk-BIG7MHHI.js"
+    "chunk-EH6DYICA": {
+      "file": "chunk-EH6DYICA.js"
     },
-    "chunk-D4D2XWKF": {
-      "file": "chunk-D4D2XWKF.js"
+    "chunk-RY5ODQAQ": {
+      "file": "chunk-RY5ODQAQ.js"
     },
-    "chunk-Y2F7D3TJ": {
-      "file": "chunk-Y2F7D3TJ.js"
+    "chunk-BUSYA2B4": {
+      "file": "chunk-BUSYA2B4.js"
     }
   }
 }

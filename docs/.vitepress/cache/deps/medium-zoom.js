@@ -1,6 +1,6 @@
-import "./chunk-Y2F7D3TJ.js";
+import "./chunk-BUSYA2B4.js";
 
-// node_modules/.pnpm/medium-zoom@1.1.0/node_modules/medium-zoom/dist/medium-zoom.esm.js
+// node_modules/medium-zoom/dist/medium-zoom.esm.js
 var _extends = Object.assign || function(target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i];
@@ -434,8 +434,7 @@ var mediumZoom = function mediumZoom2(selector) {
   return zoom;
 };
 function styleInject(css2, ref) {
-  if (ref === void 0)
-    ref = {};
+  if (ref === void 0) ref = {};
   var insertAt = ref.insertAt;
   if (!css2 || typeof document === "undefined") {
     return;
