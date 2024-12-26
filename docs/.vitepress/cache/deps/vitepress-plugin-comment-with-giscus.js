@@ -9,7 +9,7 @@ import {
   openBlock,
   ref,
   watch
-} from "./chunk-RY5ODQAQ.js";
+} from "./chunk-XRFTPAKN.js";
 import "./chunk-BUSYA2B4.js";
 
 // node_modules/@giscus/vue/dist/index.mjs
@@ -36,7 +36,7 @@ var l = defineComponent({
   setup(s) {
     const t = ref(false);
     return onMounted(() => {
-      t.value = true, import("./giscus-aTimukGI-AW4UKNQN.js");
+      t.value = true, import("./giscus-aTimukGI-6DSZEEQN.js");
     }), (e, m) => t.value ? (openBlock(), createElementBlock("giscus-widget", {
       key: 0,
       id: e.id,
