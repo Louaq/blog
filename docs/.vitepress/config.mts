@@ -354,8 +354,7 @@ export default defineConfig({
 	   
 	   ]
 	
-	}
-
+	},
    ],
 	'/column/ai/': [
 	{
@@ -395,7 +394,20 @@ export default defineConfig({
 				
 		  ]
         }
-      ]
+      ],
+      '/column/Paper/': [
+          {
+              text: 'Latex',
+	         collapsed: false,
+              items: [
+                 {
+                      text: 'latex环境配置',
+                      link: '/column/Paper/Visual Studio Code latex'
+                 }
+             ] 
+         },
+
+       ]
  
   },
 
