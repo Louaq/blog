@@ -75,6 +75,7 @@ export const nav: DefaultTheme.NavItem[] = [
 		link: '/column/Paper/'
 	  
 	  }
+
     ]
   
   
