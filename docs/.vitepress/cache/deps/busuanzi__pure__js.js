@@ -2,9 +2,9 @@ import {
   __commonJS
 } from "./chunk-BUSYA2B4.js";
 
-// node_modules/busuanzi.pure.js/busuanzi.pure.js
+// node_modules/.pnpm/busuanzi.pure.js@1.0.3/node_modules/busuanzi.pure.js/busuanzi.pure.js
 var require_busuanzi_pure = __commonJS({
-  "node_modules/busuanzi.pure.js/busuanzi.pure.js"(exports, module) {
+  "node_modules/.pnpm/busuanzi.pure.js@1.0.3/node_modules/busuanzi.pure.js/busuanzi.pure.js"(exports, module) {
     var bszCaller;
     var bszTag;
     var scriptTag;
@@ -90,9 +90,9 @@ var require_busuanzi_pure = __commonJS({
   }
 });
 
-// node_modules/busuanzi.pure.js/index.js
+// node_modules/.pnpm/busuanzi.pure.js@1.0.3/node_modules/busuanzi.pure.js/index.js
 var require_busuanzi_pure2 = __commonJS({
-  "node_modules/busuanzi.pure.js/index.js"(exports, module) {
+  "node_modules/.pnpm/busuanzi.pure.js@1.0.3/node_modules/busuanzi.pure.js/index.js"(exports, module) {
     module.exports = require_busuanzi_pure();
   }
 });

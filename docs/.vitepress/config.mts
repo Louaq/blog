@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import { nav } from './relaConf/navbar.mts';
 import timeline from "vitepress-markdown-timeline";
 import taskLists from 'markdown-it-task-checkbox'
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/blog/',
@@ -30,7 +31,7 @@ export default defineConfig({
   markdown: { 
     config: (md) => {
       md.use(timeline);
-	  md.use(taskLists, {
+	    md.use(taskLists, {
         disabled: true,
         divWrap: false,
         divClass: 'checkbox',
@@ -38,14 +39,20 @@ export default defineConfig({
         ulClass: 'task-list',
         liClass: 'task-list-item',
       });
+      md.use(groupIconMdPlugin);
 	  
-      },
+    },
 	  image: {
         lazyLoading: true
       },
 	  math: true,
 	  lineNumbers: true
-    },
+  },
+  vite: { 
+    plugins: [
+      groupIconVitePlugin() //代码组图标
+    ],
+  },
   themeConfig: {
     darkModeSwitchLabel: '深浅模式',
     logo: '/b.jpg',

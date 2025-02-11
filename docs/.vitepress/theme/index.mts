@@ -5,14 +5,23 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 import { useData, useRoute } from 'vitepress';
 import "vitepress-markdown-timeline/dist/theme/index.css";
 import mediumZoom from 'medium-zoom';
-import { onMounted, watch, nextTick } from 'vue';
+import { onMounted, watch, nextTick, h } from 'vue';
 import { useRoute } from 'vitepress';
 import './style/fonts.css'
 import './style/index.css'
 import { inBrowser } from 'vitepress'
 import busuanzi from 'busuanzi.pure.js'
+import backtotop from "./components/backtotop.vue"
+import MyLayout from './components/MyLayout.vue'
+import notice from "./components/notice.vue"
+import 'virtual:group-icons.css' //代码组样式 //
 export default {
   extends: DefaultTheme,
+  Layout() { 
+    return h(DefaultTheme.Layout, null, {
+      'doc-footer-before': () => h(backtotop), // 使用doc-footer-before插槽
+    })
+  },
   enhanceApp({app, router}) {
     app.component('Mycomponent' , Mycomponent);
 	if (inBrowser) {
@@ -23,7 +32,7 @@ export default {
 	
 	
   },
-   setup() {
+  setup() {
     const route = useRoute();
     const initZoom = () => {
       // mediumZoom('[data-zoomable]', { background: 'var(--vp-c-bg)' }); // 默认

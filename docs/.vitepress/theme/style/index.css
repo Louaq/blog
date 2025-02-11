@@ -1,4 +1,5 @@
 /* index.css */
+@import './vp-code-title.css';
 @import './var.css';
 @import './vp-code-group.css';
 @import './link.css';
