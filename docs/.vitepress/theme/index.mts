@@ -20,7 +20,7 @@ export default {
   Layout() { 
     return h(DefaultTheme.Layout, null, {
       'layout-top': () => h(notice), // 使用layout-top插槽
-      //'doc-footer-before': () => h(backtotop), // 使用doc-footer-before插槽
+      //'doc-footer-before': () => h(backtotop), 
     })
   },
   enhanceApp({app, router}) {
