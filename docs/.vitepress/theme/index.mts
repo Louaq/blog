@@ -19,7 +19,8 @@ export default {
   extends: DefaultTheme,
   Layout() { 
     return h(DefaultTheme.Layout, null, {
-      'doc-footer-before': () => h(backtotop), // 使用doc-footer-before插槽
+      'layout-top': () => h(notice), // 使用layout-top插槽
+      //'doc-footer-before': () => h(backtotop), // 使用doc-footer-before插槽
     })
   },
   enhanceApp({app, router}) {

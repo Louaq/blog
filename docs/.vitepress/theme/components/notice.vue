@@ -17,15 +17,7 @@ setTimeout(function () { visible.value = false }, 5000);
         <h3 class="notice-title">网站公告</h3>
 
         <div class="notice-describe">
-            <p>本次更新：新公告样式</p>
-            <p class="notice-domain">
-                <strong>
-                    详细教程：<a href="https://vitepress.yiov.top/layout.html#%E5%85%AC%E5%91%8A"
-                        target="_blank">vitepress.yiov.top</a>
-                </strong>
-            </p>
-            <p>QQ 频道：******(无效二维码)</p>
-            <img class="notice-img" src="">
+            <p>所有内容已删除！！！</p>
         </div>
 
         <div class="notice-footer">
