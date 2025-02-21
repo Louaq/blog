@@ -99,7 +99,7 @@ export default defineConfig({
 	},
 	footer: { 
       message: 'Released under the <a href="https://mit-license.org/">MIT License.</a>', 
-      copyright: `Copyright © 2024-${new Date().getFullYear()} present <a href="https://github.com/Louaq">YangYang</a>` ,  
+      copyright: `Copyright © 2024-${new Date().getFullYear()}` ,  
     },
 	 
 	i18nRouting: true,
