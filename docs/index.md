@@ -26,7 +26,7 @@ hero:
       link: https://github.com/Louaq
     - theme: alt
       text: 个人成长
-      link: /column/Growing/
+      link: https://hulzt.top
 # 按钮下方的描述
 features:
   - icon: 🤹
@@ -34,7 +34,7 @@ features:
     details: 电子信息研究生
   - icon: 👩
     title: 深度学习
-    details: 计算机视觉，超分辨率
+    details: 计算机视觉，医学图像处理
   - icon: 🧩
     title: 热爱编码
     details: 是个平平无奇但是又很热爱学习的青年。

@@ -9,8 +9,8 @@ export default defineConfig({
   title: "lab blog",
   description: "A VitePress Site",
   head: [
-    ['link',{ rel: 'icon', href: '/icon.png'}],
-	[
+    ['link',{ rel: 'icon', href: '/blog/icon.png'}],
+	  [
       'link',
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
     ],
@@ -98,8 +98,8 @@ export default defineConfig({
 		provider: 'local'
 	},
 	footer: { 
-      message: 'Released under the MIT License.', 
-      copyright: 'Copyright © 2013-2024 present louaq', 
+      message: 'Released under the <a href="https://mit-license.org/">MIT License.</a>', 
+      copyright: `Copyright © 2024-${new Date().getFullYear()} present <a href="https://github.com/Louaq">YangYang</a>` ,  
     },
 	 
 	i18nRouting: true,
