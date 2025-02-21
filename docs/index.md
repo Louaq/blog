@@ -23,10 +23,10 @@ hero:
     actions:
     - theme: brand
       text: 进入主页
-      link: https://github.com/Louaq
+      link:
     - theme: alt
       text: 个人成长
-      link: https://hulzt.top
+      link: 
 # 按钮下方的描述
 features:
   - icon: 🤹
