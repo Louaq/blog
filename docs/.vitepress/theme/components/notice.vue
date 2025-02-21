@@ -17,7 +17,7 @@ setTimeout(function () { visible.value = false }, 5000);
         <h3 class="notice-title">网站公告</h3>
 
         <div class="notice-describe">
-            <p>所有内容已删除！！！所以文章正在迁移</p>
+            <p>所有内容已删除！！！</p>
         </div>
 
         <div class="notice-footer">
