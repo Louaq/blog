@@ -24,7 +24,6 @@ export default {
   enhanceApp({app, router}) { 
     // 注册全局组件
     app.component('MyLayout', MyLayout)
-    app.component('DataPanel' , DataPanel)
     app.component('notice', notice)
     app.component('backtotop', backtotop)
 
@@ -41,7 +40,7 @@ export default {
   },
   Layout() { 
     return h(DefaultTheme.Layout, null, {
-      //'layout-top': () => h(notice), // 使用layout-top插槽
+      'layout-top': () => h(notice), // 使用layout-top插槽
       'doc-footer-before': () => h(backtotop), 
     })
   },
