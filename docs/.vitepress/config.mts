@@ -98,8 +98,10 @@ export default defineConfig({
 		provider: 'local'
 	},
 	footer: { 
-      message: 'Released under the <a href="https://mit-license.org/">MIT License.</a>', 
-      copyright: `Copyright © 2024-${new Date().getFullYear()} <br> 本站总访问量 <span id="busuanzi_value_site_pv" /> 次 本站访客数 <span id="busuanzi_value_site_uv" /> 人次` ,  
+    message: `Released under the <a href="https://mit-license.org/">MIT License.</a> | 
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 | 
+    本站访客数 <span id="busuanzi_value_site_uv"></span> 人次`,
+      copyright: `Copyright © 2024-${new Date().getFullYear()}` ,  
     },
 	 
 	i18nRouting: true,
