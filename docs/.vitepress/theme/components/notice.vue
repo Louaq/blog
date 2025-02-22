@@ -6,7 +6,7 @@ function closetz() {
     visible.value = false
 }
 
-setTimeout(function () { visible.value = false }, 5000);
+setTimeout(function () { visible.value = false }, 8000);
 </script>
 
 <template>
@@ -17,7 +17,7 @@ setTimeout(function () { visible.value = false }, 5000);
         <h3 class="notice-title">网站公告</h3>
 
         <div class="notice-describe">
-            <p>所有文章已同步到<a href="https://louaq.github.io/vitepress/">新网站</a></p>
+            <p>所有文章已同步到<a href="https://louaq.github.io/vitepress/" target="_blank">新网站</a></p>
         </div>
 
         <div class="notice-footer">
@@ -87,7 +87,7 @@ setTimeout(function () { visible.value = false }, 5000);
 }
 
 .notice-describe p a {
-    color: #eb0e0e;
+    color:rgb(72, 11, 240);
 }
 
 .notice-domain {
