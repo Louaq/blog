@@ -1,67 +1,91 @@
 {
-  "hash": "79863e4d",
+  "hash": "a40f42e1",
   "configHash": "ef2cab8f",
-  "lockfileHash": "9ad4f855",
-  "browserHash": "6365968f",
+  "lockfileHash": "cfcd61a6",
+  "browserHash": "5e6affb0",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/.pnpm/vue@3.4.27/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "6f122278",
+      "fileHash": "d0e6c242",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.2.1_vue@3.4.27/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "3a56e445",
+      "fileHash": "444a251a",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/.pnpm/@vueuse+core@10.9.0_vue@3.4.27/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "5344dd27",
+      "fileHash": "91a7d2ff",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/.pnpm/@vueuse+integrations@10.9.0_focus-trap@7.5.4_vue@3.4.27/node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "06d525d0",
+      "fileHash": "2b6f29e0",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/.pnpm/mark.js@8.11.1/node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "b6a33977",
+      "fileHash": "52679ca8",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/.pnpm/minisearch@6.3.0/node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "8ff6265d",
+      "fileHash": "cb6465d8",
       "needsInterop": false
     },
     "vitepress-plugin-comment-with-giscus": {
       "src": "../../../../node_modules/.pnpm/vitepress-plugin-comment-with-giscus@1.1.15_vue@3.4.27/node_modules/vitepress-plugin-comment-with-giscus/lib/giscus.js",
       "file": "vitepress-plugin-comment-with-giscus.js",
-      "fileHash": "2016c895",
+      "fileHash": "135c87d0",
       "needsInterop": false
     },
     "medium-zoom": {
       "src": "../../../../node_modules/.pnpm/medium-zoom@1.1.0/node_modules/medium-zoom/dist/medium-zoom.esm.js",
       "file": "medium-zoom.js",
-      "fileHash": "2c716daa",
+      "fileHash": "be2d8152",
+      "needsInterop": false
+    },
+    "canvas-confetti": {
+      "src": "../../../../node_modules/.pnpm/canvas-confetti@1.9.3/node_modules/canvas-confetti/dist/confetti.module.mjs",
+      "file": "canvas-confetti.js",
+      "fileHash": "b7fb0c14",
       "needsInterop": false
     },
     "busuanzi.pure.js": {
       "src": "../../../../node_modules/.pnpm/busuanzi.pure.js@1.0.3/node_modules/busuanzi.pure.js/index.js",
       "file": "busuanzi__pure__js.js",
-      "fileHash": "838ca329",
+      "fileHash": "791fa47a",
       "needsInterop": true
+    },
+    "nprogress-v2/dist/index.js": {
+      "src": "../../../../node_modules/.pnpm/nprogress-v2@1.1.10/node_modules/nprogress-v2/dist/index.js",
+      "file": "nprogress-v2_dist_index__js.js",
+      "fileHash": "d6eb6faf",
+      "needsInterop": true
+    },
+    "vitepress-theme-website": {
+      "src": "../../../../node_modules/.pnpm/vitepress-theme-website@1.0.8/node_modules/vitepress-theme-website/dist/index.mjs",
+      "file": "vitepress-theme-website.js",
+      "fileHash": "41fa95ea",
+      "needsInterop": false
+    },
+    "animejs": {
+      "src": "../../../../node_modules/.pnpm/animejs@3.2.2/node_modules/animejs/lib/anime.es.js",
+      "file": "animejs.js",
+      "fileHash": "9d44c7f0",
+      "needsInterop": false
     }
   },
   "chunks": {
-    "giscus-aTimukGI-TI4U3E3N": {
-      "file": "giscus-aTimukGI-TI4U3E3N.js"
+    "giscus-aTimukGI-N3JQPU2A": {
+      "file": "giscus-aTimukGI-N3JQPU2A.js"
     },
     "chunk-62EAQHJU": {
       "file": "chunk-62EAQHJU.js"
@@ -69,8 +93,8 @@
     "chunk-D4D2XWKF": {
       "file": "chunk-D4D2XWKF.js"
     },
-    "chunk-BUSYA2B4": {
-      "file": "chunk-BUSYA2B4.js"
+    "chunk-I2LLTMMF": {
+      "file": "chunk-I2LLTMMF.js"
     }
   }
 }

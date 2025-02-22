@@ -1,6 +1,6 @@
 import {
   __commonJS
-} from "./chunk-BUSYA2B4.js";
+} from "./chunk-I2LLTMMF.js";
 
 // node_modules/.pnpm/busuanzi.pure.js@1.0.3/node_modules/busuanzi.pure.js/busuanzi.pure.js
 var require_busuanzi_pure = __commonJS({

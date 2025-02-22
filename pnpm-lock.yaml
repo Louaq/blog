@@ -12,9 +12,21 @@ importers:
         specifier: ^3.4.27
         version: 3.4.27
     devDependencies:
+      '@types/animejs':
+        specifier: ^3.1.13
+        version: 3.1.13
+      '@types/dom-view-transitions':
+        specifier: ^1.0.5
+        version: 1.0.5
+      animejs:
+        specifier: ^3.2.2
+        version: 3.2.2
       busuanzi.pure.js:
         specifier: ^1.0.3
         version: 1.0.3
+      canvas-confetti:
+        specifier: ^1.9.3
+        version: 1.9.3
       markdown-it-mathjax3:
         specifier: ^4.3.2
         version: 4.3.2
@@ -24,6 +36,9 @@ importers:
       medium-zoom:
         specifier: ^1.1.0
         version: 1.1.0
+      nprogress-v2:
+        specifier: ^1.1.10
+        version: 1.1.10
       vite:
         specifier: ^5.4.11
         version: 5.4.11
@@ -424,6 +439,12 @@ packages:
   '@shikijs/transformers@1.6.0':
     resolution: {integrity: sha512-qGfHe1ECiqfE2STPWvfogIj/9Q0SK+MCRJdoITkW7AmFuB7DmbFnBT2US84+zklJOB51MzNO8RUXZiauWssJlQ==}
 
+  '@types/animejs@3.1.13':
+    resolution: {integrity: sha512-yWg9l1z7CAv/TKpty4/vupEh24jDGUZXv4r26StRkpUPQm04ztJaftgpto8vwdFs8SiTq6XfaPKCSI+wjzNMvQ==}
+
+  '@types/dom-view-transitions@1.0.5':
+    resolution: {integrity: sha512-N2sILR7fxSMnaFaAPwGj4DtHCXjIyQTHt+xJyf9jATpzUsTkMNM0DWtqZB6W7f501B/Y0tq3uqat/VlbjuTpMA==}
+
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
@@ -555,6 +576,9 @@ packages:
   algoliasearch@4.23.3:
     resolution: {integrity: sha512-Le/3YgNvjW9zxIQMRhUHuhiUjAlKY/zsdZpfq4dlLqg6mEm0nL6yk+7f2hDOtLpxsgE4jSzDmvHL7nXdBp5feg==}
 
+  animejs@3.2.2:
+    resolution: {integrity: sha512-Ao95qWLpDPXXM+WrmwcKbl6uNlC5tjnowlaRYtuVDHHoygjtIPfDUoK9NthrlZsQSKjZXlmji2TrBUAVbiH0LQ==}
+
   ansi-colors@4.1.3:
     resolution: {integrity: sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==}
     engines: {node: '>=6'}
@@ -567,6 +591,9 @@ packages:
 
   busuanzi.pure.js@1.0.3:
     resolution: {integrity: sha512-tPULdyx+8NNb9geZYDpktKmHAYx9f2LEOBaHyWCaM7iPEMIa/43KgYAUluuU7YG9UFSOFpj4dO7Nj2Vlu3V9Rg==}
+
+  canvas-confetti@1.9.3:
+    resolution: {integrity: sha512-rFfTURMvmVEX1gyXFgn5QMn81bYk70qa0HLzcIOSVEyl57n6o9ItHeBtUSWdvKAPY0xlvBHno4/v3QPrT83q9g==}
 
   cheerio-select@1.6.0:
     resolution: {integrity: sha512-eq0GdBvxVFbqWgmCm7M3XGs1I8oLy/nExUnh6oLqmBditPO9AqQJrkslDpMun/hZ0yyTs8L0m85OHp4ho6Qm9g==}
@@ -760,6 +787,9 @@ packages:
     peerDependenciesMeta:
       encoding:
         optional: true
+
+  nprogress-v2@1.1.10:
+    resolution: {integrity: sha512-MypWLNIPIM07SS0bAc/oac0vhVFz9vAHm7d1sj//Pnf3J03LQ3CuWrlDteIu6exq0fIvkDJ6tUDRWLaifsIt5w==}
 
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
@@ -1269,6 +1299,10 @@ snapshots:
     dependencies:
       shiki: 1.6.0
 
+  '@types/animejs@3.1.13': {}
+
+  '@types/dom-view-transitions@1.0.5': {}
+
   '@types/estree@1.0.6': {}
 
   '@types/linkify-it@5.0.0': {}
@@ -1426,6 +1460,8 @@ snapshots:
       '@algolia/requester-node-http': 4.23.3
       '@algolia/transporter': 4.23.3
 
+  animejs@3.2.2: {}
+
   ansi-colors@4.1.3: {}
 
   autosize@6.0.1: {}
@@ -1433,6 +1469,8 @@ snapshots:
   boolbase@1.0.0: {}
 
   busuanzi.pure.js@1.0.3: {}
+
+  canvas-confetti@1.9.3: {}
 
   cheerio-select@1.6.0:
     dependencies:
@@ -1652,6 +1690,8 @@ snapshots:
   node-fetch@2.7.0:
     dependencies:
       whatwg-url: 5.0.0
+
+  nprogress-v2@1.1.10: {}
 
   nth-check@2.1.1:
     dependencies:

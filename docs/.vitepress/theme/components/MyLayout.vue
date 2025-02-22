@@ -4,7 +4,7 @@
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
-
+import MouseFollower from "./MouseFollower.vue";
 const { isDark } = useData()
 
 const enableTransitions = () =>
@@ -43,7 +43,10 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 
 <template>
   <DefaultTheme.Layout>
-    <!-- 这里可以插入其他插槽组件 -->
+    <template #layout-top>
+      <MouseFollower />
+      <MouseClick />
+    </template>
   </DefaultTheme.Layout>
 </template>
 
@@ -70,5 +73,9 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 
 .VPSwitchAppearance .check {
   transform: none !important;
+}
+/* 修正因视图过渡导致的按钮图标偏移 */
+.check .icon {
+  top: -2px;
 }
 </style>

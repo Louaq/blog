@@ -41,12 +41,9 @@ features:
   - icon: 🚀
     title: day day up
     details: 好好学习，天天向上
-
-
 ---
 
-
-
+<!-- index.md -->
 
 
 
