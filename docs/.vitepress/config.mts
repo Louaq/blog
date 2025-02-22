@@ -99,7 +99,7 @@ export default defineConfig({
 	},
 	footer: { 
     message: `Released under the <a href="https://mit-license.org/">MIT License.</a> | 
-    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 | 
+    本站总访问量 <span id="busuanzi_value_site_pv_show"></span> 次 | 
     本站访客数 <span id="busuanzi_value_site_uv"></span> 人次`,
       copyright: `Copyright © 2024-${new Date().getFullYear()}` ,  
     },
