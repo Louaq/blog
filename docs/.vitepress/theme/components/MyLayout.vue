@@ -74,8 +74,4 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 .VPSwitchAppearance .check {
   transform: none !important;
 }
-/* 修正因视图过渡导致的按钮图标偏移 */
-.check .icon {
-  top: -2px;
-}
 </style>
