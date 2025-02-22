@@ -17,7 +17,6 @@ import DataPanel from "./components/DataPanel.vue"
 import confetti from "./components/confetti.vue"
 import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
 import 'nprogress-v2/dist/index.css' // 进度条样式
-import { useLive2d } from 'vitepress-theme-website'
 import { inBrowser } from 'vitepress'
 import busuanzi from 'busuanzi.pure.js'
 export default {
@@ -48,26 +47,6 @@ export default {
   },
   setup() {
     const route = useRoute();
-    //看板娘 //
-    useLive2d({
-      enable: true,
-      model: {
-        url: 'https://raw.githubusercontent.com/iCharlesZ/vscode-live2d-models/master/model-library/hibiki/hibiki.model.json'
-      },
-      display: {
-        position: 'right',
-        width: '135px',
-        height: '300px',
-        xOffset: '35px',
-        yOffset: '5px'
-      },
-      mobile: {
-        show: true
-      },
-      react: {
-        opacity: 0.8
-      }
-    });
     const initZoom = () => {
       // mediumZoom('[data-zoomable]', { background: 'var(--vp-c-bg)' }); // 默认
       mediumZoom('.main img', { background: 'var(--vp-c-bg)' }); // 不显式添加{data-zoomable}的情况下为所有图像启用此功能
