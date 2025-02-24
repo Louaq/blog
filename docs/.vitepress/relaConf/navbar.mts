@@ -5,6 +5,10 @@ export const nav: DefaultTheme.NavItem[] = [
     link: '/' // 表示docs/index.md
   },
   {
+    text: '图像分割',
+    link: '/column/image_segmentation' // 表示docs/index.md
+  },
+  {
     text: '论文阅读笔记',
     link: '/column/Paper/' // 表示docs/index.md
   },
