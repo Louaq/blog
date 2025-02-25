@@ -71,6 +71,37 @@ export default defineConfig({
               }
           ] 
       },
+    ],
+    '/column/image_segmentation/': [
+      {
+        text: '图像分割原理及概念',
+        collapsed: false,
+          items: [
+              {
+                text: '语义分割概述',
+                link: '/column/image_segmentation/20250224-语义分割概述'
+              },
+              {
+                text: '语义分割上采样',
+                link: '/column/image_segmentation/220250224-语义分割上采样'
+              },
+              {
+                text: '图像分割基础',
+                link: '/column/image_segmentation/图像分割基础'
+              },
+              {
+                text: '语义分割基础模型',
+                link: '/column/image_segmentation/语义分割基础模型'
+
+              },
+              {
+                text: 'FCN模型讲解',
+                link: '/column/image_segmentation/FCN模型讲解'
+
+              }
+          ] 
+      },
+
     ]
  
   },
