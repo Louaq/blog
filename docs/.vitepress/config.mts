@@ -62,13 +62,22 @@ export default defineConfig({
   sidebar: {
     '/column/Paper/': [
       {
-        text: 'Latex',
+        text: '论文阅读',
 	      collapsed: false,
           items: [
               {
                 text: 'latex环境配置',
                 link: '/column/Paper/Visual Studio Code latex'
-              }
+              },
+              {
+                text: 'Segment Anything',
+                link: '/column/Paper/Segment Anything'
+              },
+              {
+                text: '领域泛化语义分割',
+                link: '/column/Paper/DGSS'
+              },
+
           ] 
       },
     ],
