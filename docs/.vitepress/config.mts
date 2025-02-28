@@ -77,6 +77,10 @@ export default defineConfig({
                 text: '领域泛化语义分割',
                 link: '/column/Paper/DGSS'
               },
+              {
+                text: '基于分层编码器的开放词汇语义分割',
+                link: '/column/Paper/SED'
+              },
 
           ] 
       },
