@@ -3,6 +3,7 @@ import { nav } from './relaConf/navbar.mts';
 import timeline from "vitepress-markdown-timeline";
 import taskLists from 'markdown-it-task-checkbox'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import { La51Plugin } from 'vitepress-plugin-51la'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/blog/',
@@ -50,7 +51,12 @@ export default defineConfig({
   },
   vite: { 
     plugins: [
-      groupIconVitePlugin() //代码组图标
+      groupIconVitePlugin(),
+      La51Plugin({
+        id: '3LPXyA1ZitpV3O1s',
+        ck: '3LPXyA1ZitpV3O1s',
+        autoTrack:true
+      })
     ],
   },
   themeConfig: {

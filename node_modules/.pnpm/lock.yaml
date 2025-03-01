@@ -11,6 +11,9 @@ importers:
       '@vue/runtime-core':
         specifier: ^3.4.27
         version: 3.4.27
+      vitepress-plugin-51la:
+        specifier: ^0.1.0
+        version: 0.1.0(vitepress@1.2.2(@algolia/client-search@4.23.3)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0))
     devDependencies:
       '@types/animejs':
         specifier: ^3.1.13
@@ -922,6 +925,11 @@ packages:
   vitepress-markdown-timeline@1.2.1:
     resolution: {integrity: sha512-XPYl/btTcTzW+XF20ITB51L8jPjbS72tSKPcv/CHJgM+3LbBvW8Az/X7RcBTJSXDNOwCY5mGkjA7CXQtuxOKgw==}
 
+  vitepress-plugin-51la@0.1.0:
+    resolution: {integrity: sha512-jV5w7sgqGFuum70wpIY9hggFio4H1C3+MayeeP/b55Cf+lRiFVNMrQQvWjw7UjT0bO1eiJYq4DiLsxzXt7r+QA==}
+    peerDependencies:
+      vitepress: ^1
+
   vitepress-plugin-comment-with-giscus@1.1.15:
     resolution: {integrity: sha512-1DJjgN+7SYvn5ZkjuSXPmz7nlqfcrh4qCGGviiZghA2ELXnaO2m9WY7m+RisPSaqCn90xqe0JbO2T4NMq8iUBg==}
 
@@ -1807,6 +1815,10 @@ snapshots:
   vitepress-markdown-timeline@1.2.1:
     dependencies:
       dayjs: 1.11.11
+
+  vitepress-plugin-51la@0.1.0(vitepress@1.2.2(@algolia/client-search@4.23.3)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)):
+    dependencies:
+      vitepress: 1.2.2(@algolia/client-search@4.23.3)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)
 
   vitepress-plugin-comment-with-giscus@1.1.15(vue@3.4.27):
     dependencies:

@@ -38,6 +38,7 @@
     }
   },
   "dependencies": {
-    "@vue/runtime-core": "^3.4.27"
+    "@vue/runtime-core": "^3.4.27",
+    "vitepress-plugin-51la": "^0.1.0"
   }
 }
