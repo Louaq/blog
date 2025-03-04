@@ -87,6 +87,18 @@ export default defineConfig({
                 text: '基于分层编码器的开放词汇语义分割',
                 link: '/column/Paper/SED'
               },
+              {
+                text: '超高分辨率分割',
+                link: '/column/Paper/High_Quality_Segmentation'
+              },
+              {
+                text: '夜间场景语义分割',
+                link: '/column/Paper/Night-time_Semantic_Segmentation'
+              },
+              {
+                text: '提示词迁移的少样本分割',
+                link: '/column/Paper/PAT'
+              }
 
           ] 
       },
