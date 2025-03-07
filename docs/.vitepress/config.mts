@@ -98,6 +98,10 @@ export default defineConfig({
               {
                 text: '提示词迁移的少样本分割',
                 link: '/column/Paper/PAT'
+              },
+              {
+                text: '多模态图像分割',
+                link: '/column/Paper/Prompting_Multi-Moda_Segmetation'
               }
 
           ] 
