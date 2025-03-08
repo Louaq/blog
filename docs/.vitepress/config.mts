@@ -102,6 +102,10 @@ export default defineConfig({
               {
                 text: '多模态图像分割',
                 link: '/column/Paper/Prompting_Multi-Moda_Segmetation'
+              },
+              {
+                text: '基于Transformer的自适应原型匹配网络',
+                link: '/column/Paper/A Transformer-basedAdaptivePrototypeMatchingNetwork'
               }
 
           ] 
