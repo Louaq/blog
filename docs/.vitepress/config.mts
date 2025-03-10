@@ -106,6 +106,14 @@ export default defineConfig({
               {
                 text: '基于Transformer的自适应原型匹配网络',
                 link: '/column/Paper/A Transformer-basedAdaptivePrototypeMatchingNetwork'
+              },
+              {
+                text: '跨领域少样本语义分割',
+                link: '/column/Paper/Cross-Domain Few-Shot Semantic Segmentation via Doubly Matching Transformation'
+              },
+              {
+                text: '相关内在特征增强的少样本与意义分割',
+                link: '/column/Paper/Relevant Intrinsic Feature Enhancement Network for Few-Shot Semantic Segmentation'
               }
 
           ] 
