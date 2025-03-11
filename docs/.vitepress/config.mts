@@ -114,6 +114,10 @@ export default defineConfig({
               {
                 text: '相关内在特征增强的少样本与意义分割',
                 link: '/column/Paper/Relevant Intrinsic Feature Enhancement Network for Few-Shot Semantic Segmentation'
+              },
+              {
+                text: '基于涂鸦的无监督语义分割',
+                link: '/column/Paper/Scribble-Supervised Semantic Segmentation with Prototype-based Feature Augmentation'
               }
 
           ] 
