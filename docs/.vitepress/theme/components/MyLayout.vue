@@ -4,6 +4,7 @@
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
+import MouseClick from "./MouseClick.vue";
 import MouseFollower from "./MouseFollower.vue";
 const { isDark } = useData()
 

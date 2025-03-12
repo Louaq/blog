@@ -1,9 +1,10 @@
 /* index.css */
-@import './vp-code-title.css';
 @import './var.css';
-@import './vp-code-group.css';
 @import './link.css';
 @import './linkcard.css';
 @import './rainbow.css';
 @import './blur.css';
 @import './hidden.css';
+@import './vp-code.css';
+@import './vp-code-group.css';
+@import './vp-code-title.css';
