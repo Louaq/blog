@@ -1,4 +1,4 @@
-```
+```Python
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -7,7 +7,7 @@ import numpy as np
 
 
 
-```
+```Python
 class FCN_VGG16(nn.Module):
     '''
     FCN 的 backbone，由 VGG16 修改而来，舍弃最后的全连接层
@@ -69,7 +69,7 @@ class FCN_VGG16(nn.Module):
 
 
 
-```
+```Python
 def test_vgg():
     # Backbone 的测试函数
     input_x = torch.randn((1,3,512,512))
@@ -78,7 +78,7 @@ def test_vgg():
 
     for key in output_y:
         print(output_y[key].size())
-
+        
 test_vgg()
 ```
 
