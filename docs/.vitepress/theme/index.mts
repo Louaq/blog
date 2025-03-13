@@ -19,8 +19,11 @@ import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
 import 'nprogress-v2/dist/index.css' // 进度条样式
 import { inBrowser } from 'vitepress'
 import busuanzi from 'busuanzi.pure.js'
+import bsz from "./components/bsz.vue"
 import update from "./components/update.vue"
 import ArticleMetadata from "./components/ArticleMetadata.vue"
+import MouseClick from "./components/MouseClick.vue"
+import MouseFollower from "./components/MouseFollower.vue"
 export default {
   extends: DefaultTheme,
   enhanceApp({app, router}) { 
@@ -30,6 +33,8 @@ export default {
     app.component('notice', notice)
     app.component('backtotop', backtotop)
     app.component('ArticleMetadata' , ArticleMetadata)
+    app.component('MouseClick', MouseClick) //鼠标跟随组件
+    app.component('MouseFollower', MouseFollower) //鼠标跟随组件
 
     if (inBrowser){
       NProgress.configure({ showSpinner: false })
@@ -42,10 +47,26 @@ export default {
       }
     }
   },
-  Layout() { 
-    return h(DefaultTheme.Layout, null, {
-      //'layout-top': () => h(notice), // 使用layout-top插槽
-      'doc-footer-before': () => h(backtotop), 
+  //导航
+  Layout: () => {
+    const props: Record<string, any> = {}
+    // 获取 frontmatter
+    const { frontmatter } = useData()
+
+    /* 添加自定义 class */
+    if (frontmatter.value?.layoutClass) {
+      props.class = frontmatter.value.layoutClass
+    }
+
+    // return h(DefaultTheme.Layout, props, {
+    //   'layout-bottom': () => h(bsz), //不蒜子layout-bottom插槽
+    //   'doc-footer-before': () => h(backtotop), // 返回顶部doc-footer-before插槽
+    //   'layout-top': () => h(notice), // 公告layout-top插槽
+    // })
+
+    return h(MyLayout,props,{
+      'doc-footer-before': () => h(backtotop)
+
     })
   },
   setup() {

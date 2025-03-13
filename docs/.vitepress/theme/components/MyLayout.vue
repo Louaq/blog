@@ -4,8 +4,10 @@
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
+
 import MouseClick from "./MouseClick.vue";
 import MouseFollower from "./MouseFollower.vue";
+import backtotop from "./backtotop.vue"
 const { isDark } = useData()
 const enableTransitions = () =>
   'startViewTransition' in document &&
@@ -45,8 +47,13 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
   <DefaultTheme.Layout>
     <template #layout-top>
       <MouseFollower />
-      <MouseClick />
+      
     </template>
+    
+    <template #doc-footer-before>
+      <backtotop />
+    </template>
+
   </DefaultTheme.Layout>
 </template>
 
