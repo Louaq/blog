@@ -1,5 +1,5 @@
 # Scribble-Supervised Semantic Segmentation with Prototype-based Feature Augmentation
-
+<ArticleMetadata/>
 **Hohai University, Nanjing, China**
 
 **RMIT University, Melbourne, Australia**

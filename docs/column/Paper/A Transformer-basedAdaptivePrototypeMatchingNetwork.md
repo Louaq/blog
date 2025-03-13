@@ -1,5 +1,5 @@
 # A Transformer-based Adaptive Prototype Matching Network for Few-Shot Semantic Segmentation
-
+<ArticleMetadata/>
 ## 南京信息工程大学、青海师范大学、澳门大学、中国科学院  :100:
 
 

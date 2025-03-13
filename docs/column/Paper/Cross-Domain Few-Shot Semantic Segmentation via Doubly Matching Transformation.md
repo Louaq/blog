@@ -1,5 +1,5 @@
 # Cross-Domain Few-Shot Semantic Segmentation via Doubly Matching Transformation :1st_place_medal:
-
+<ArticleMetadata/>
 Nanjing University of Aeronautics and Astronautics 、State Key Laboratory of Integrated Services Networks, Xidian University
 
 

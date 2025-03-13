@@ -1,5 +1,5 @@
 # Stronger, Fewer, & Superior Harnessing Vision Foundation Models for Domain Generalized Semantic Segmentation（DGSS）
-
+<ArticleMetadata/>
 ##  **中国科学技术大学，上海人工智能实验室**
 
 https://github.com/w1oves/Rein.git

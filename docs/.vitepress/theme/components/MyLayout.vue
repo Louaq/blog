@@ -7,7 +7,6 @@ import { nextTick, provide } from 'vue'
 import MouseClick from "./MouseClick.vue";
 import MouseFollower from "./MouseFollower.vue";
 const { isDark } = useData()
-
 const enableTransitions = () =>
   'startViewTransition' in document &&
   window.matchMedia('(prefers-reduced-motion: no-preference)').matches

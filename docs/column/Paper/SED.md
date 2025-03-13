@@ -1,5 +1,5 @@
 # SED:A Simple Encoder-Decoder for Open-Vocabulary Semantic Segmentation 
-
+<ArticleMetadata/>
 ## **天津大学，重庆大学等**
 
 > 摘要：Open-vocabulary semantic segmentation strives to distinguish pixels into different semantic groups from an open

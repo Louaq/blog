@@ -1,11 +1,13 @@
+# FCN模型讲解
+<ArticleMetadata/>
+
+
 ```Python
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 ```
-
-
 
 ```Python
 class FCN_VGG16(nn.Module):

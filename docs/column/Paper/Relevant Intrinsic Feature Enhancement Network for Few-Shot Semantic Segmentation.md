@@ -1,5 +1,5 @@
 # Relevant Intrinsic Feature Enhancement Network for Few-Shot Semantic Segmentation
-
+<ArticleMetadata/>
 University of Chinese Academy of Sciences、Chinese Academy of Sciences、Alibaba group
 
 

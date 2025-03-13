@@ -1,5 +1,5 @@
 # High Quality Segmentation for Ultra High-resolution Images
-
+<ArticleMetadata/>
 # 香港中文大学  Adobe 等 
 
 **摘要：**To segment 4K or 6K ultra high-resolution images needs extra computation consideration in image segmentation. Common strategies, such as down-sampling, patch crop- ping, and cascade model, cannot address well the balance issue between accuracy and computation cost. Motivated by the fact that humans distinguish among objects continu- ously from coarse to precise levels, we propose the Contin- uous Refinement Model (CRM) for the ultra high-resolution segmentation refinement task. CRM continuously aligns the feature map with the refinement target and aggregates fea- tures to reconstruct these image details. Besides, our CRM shows its significant generalization ability to fill the resolu- tion gap between low-resolution training images and ultra high-resolution testing ones. We present quantitative per- formance evaluation and visualization to show that our pro- posed method is fast and effective on image segmentation refinement. Code is available at https://github.com/dvlab-research/Entity/tree/main/CRM.

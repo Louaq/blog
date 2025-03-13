@@ -1,5 +1,5 @@
 # Segment Anything 
-
+<ArticleMetadata/>
 ## **Meta AI**
 
 https://segment-anything.com

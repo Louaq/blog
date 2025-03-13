@@ -1,5 +1,5 @@
 # Prompting Multi-Modal Image Segmentation with Semantic Grouping
-
+<ArticleMetadata/>
 ## University of Chinese Academy of Sciences
 
 

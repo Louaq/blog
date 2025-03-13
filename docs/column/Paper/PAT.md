@@ -1,5 +1,5 @@
 # Prompt-and-Transfer：Dynamic Class-Aware Enhancement for Few-Shot Segmentation
-
+<ArticleMetadata/>
 
 
 ## 中科院
