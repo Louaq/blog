@@ -41,11 +41,11 @@ export default defineConfig({
         liClass: 'task-list-item',
       });
       md.use(groupIconMdPlugin);
-	  
+
     },
 	  image: {
         lazyLoading: true
-      },
+    },
 	  math: true,
 	  lineNumbers: true
   },
@@ -118,6 +118,10 @@ export default defineConfig({
               {
                 text: '基于涂鸦的无监督语义分割',
                 link: '/column/Paper/Scribble-Supervised Semantic Segmentation with Prototype-based Feature Augmentation'
+              },
+              {
+                text: '面向弱监督语义分割的渐进式特征自增强',
+                link: '/column/Paper/Progressive Feature Self-Reinforcement for Weakly Supervised Semantic Segmentation'
               }
 
           ] 

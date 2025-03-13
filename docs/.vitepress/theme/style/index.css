@@ -8,3 +8,5 @@
 @import './vp-code.css';
 @import './vp-code-group.css';
 @import './vp-code-title.css';
+/* .vitepress/theme/style/index.css */
+@import './marker.css';

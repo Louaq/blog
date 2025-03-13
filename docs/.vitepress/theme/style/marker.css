@@ -1,0 +1,10 @@
+/* .vitepress/theme/style/marker.css */
+
+/* 记号笔 不喜欢可自行调整 */
+.marker-text {
+    text-decoration: underline;
+    text-decoration-thickness: 9px;
+    text-decoration-color: rgba(255, 228, 0, 0.4);
+    text-underline-offset: -4px;
+    text-decoration-skip-ink: none;
+}

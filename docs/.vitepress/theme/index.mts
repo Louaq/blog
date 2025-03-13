@@ -19,13 +19,17 @@ import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
 import 'nprogress-v2/dist/index.css' // 进度条样式
 import { inBrowser } from 'vitepress'
 import busuanzi from 'busuanzi.pure.js'
+import update from "./components/update.vue"
+import ArticleMetadata from "./components/ArticleMetadata.vue"
 export default {
   extends: DefaultTheme,
   enhanceApp({app, router}) { 
     // 注册全局组件
+    app.component('update' , update)
     app.component('MyLayout', MyLayout)
     app.component('notice', notice)
     app.component('backtotop', backtotop)
+    app.component('ArticleMetadata' , ArticleMetadata)
 
     if (inBrowser){
       NProgress.configure({ showSpinner: false })
