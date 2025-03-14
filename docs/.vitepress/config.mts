@@ -122,6 +122,10 @@ export default defineConfig({
               {
                 text: '面向弱监督语义分割的渐进式特征自增强',
                 link: '/column/Paper/Progressive Feature Self-Reinforcement for Weakly Supervised Semantic Segmentation'
+              },
+              {
+                text: '基于自监督Vit的语义分割',
+                link: '/column/Paper/Self-supervised_ViT'
               }
 
           ] 
