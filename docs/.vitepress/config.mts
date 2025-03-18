@@ -134,6 +134,10 @@ export default defineConfig({
               {
                 text: '基于语句嵌入的多领域语义分割',
                 link: '/column/Paper/Scaling_UpMulti-domain_Semantic_Segmentation_with_Sentence'
+              },
+              {
+                text: '基于涂鸦的弱监督语义分割',
+                link: '/column/Paper/Scribbl_Hides_Class_Promoting_Scribble-Based_Weakly-Supervised_Semantic_Segmentation_with Its Class Label'
               }
 
           ] 
