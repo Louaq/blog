@@ -2,6 +2,8 @@
 
 ## 摘要
 
+
+
 The **state-of-the-art semantic segmentation methods** have achieved impressive performance on predefined close-set individual datasets, but their generalization to zero-shot domains and unseen categories is limited. Labeling a large-scale dataset is challenging and expensive, Training a robust semantic segmentation model on multi-domains has drawn much attention. However, inconsistent taxonomies hinder the naive merging of current publicly available annotations. **To address this, we propose a simple solution to scale up the multi-domain semantic segmentation dataset with less human effort**. We replace each class label with a sentence embedding, which is a vector-valued embedding of a sentence describing the class. This approach enables the merging of multiple datasets from different domains, each with varying class labels and semantics. We merged publicly available noisy and weak annotations with the most finely annotated data, over 2 million images, which enables training a model that achieves performance equal to that of state-of-the-art supervised methods on 7 benchmark datasets, despite not using any images therefrom. Instead of manually tuning a consistent label space, we utilized a vector-valued embedding of short paragraphs to describe the classes. By fine-tuning the model on standard semantic segmentation datasets, we also achieve a significant improvement over the state-of-the-art supervised segmentation on NYUD-V2 (Silberman et al., in: European conference on computer vision, Springer, pp 746–760, 2012) and PASCAL-context (Everingham et al. in Int J Comput Visi 111(1):98–136, 2015) at 60% and 65% mIoU, respectively. Our method can segment unseen labels based on the closeness of language embeddings, showing strong generalization to unseen image domains and labels. Additionally, it enables impressive performance improvements in some adaptation applications, such as depth estimation and instance segmentation. Code is available at https://github.com/YvanYin/SSIW.
 
 ## 翻译
@@ -32,8 +34,6 @@ The **state-of-the-art semantic segmentation methods** have achieved impressive 
 
 
 ## 提出的模型
-
-
 
 1. - **创建语言嵌入**：从Wikipedia收集每个类别的简短描述，使用CLIP - ViT语言模型将这些描述编码为向量值的句子嵌入。这种方式能保留标签之间的语义关系，相比单字标签嵌入，更能反映类别间的语义相似性，有助于零样本标签的分割。
 

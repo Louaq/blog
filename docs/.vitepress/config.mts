@@ -126,6 +126,14 @@ export default defineConfig({
               {
                 text: '基于自监督Vit的语义分割',
                 link: '/column/Paper/Self-supervised_ViT'
+              },
+              {
+                text: '医学图像分割：基于解耦特征查询',
+                link: '/column/Paper/LearningGeneralizedMedicalImageSegmentationfromDecoupledFeatureQueries'
+              },
+              {
+                text: '基于语句嵌入的多领域语义分割',
+                link: '/column/Paper/Scaling_UpMulti-domain_Semantic_Segmentation_with_Sentence'
               }
 
           ] 
