@@ -4,6 +4,7 @@ import timeline from "vitepress-markdown-timeline";
 import taskLists from 'markdown-it-task-checkbox'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import { La51Plugin } from 'vitepress-plugin-51la'
+import vitepressProtectPlugin from "vitepress-protect-plugin"
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/blog/',
@@ -56,7 +57,12 @@ export default defineConfig({
         id: '3LPXyA1ZitpV3O1s',
         ck: '3LPXyA1ZitpV3O1s',
         autoTrack:true
-      })
+      }),
+      vitepressProtectPlugin({
+        disableF12: true, // 禁用F12开发者模式
+        disableCopy: false, // 禁用文本复制
+        disableSelect: false, // 禁用文本选择
+      }),
     ],
   },
   themeConfig: {
