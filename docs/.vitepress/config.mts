@@ -75,7 +75,7 @@ export default defineConfig({
     '/column/Paper/': [
       {
         text: '论文阅读',
-	      collapsed: false,
+	      collapsed: true,
           items: [
               {
                 text: 'latex环境配置',
@@ -145,13 +145,23 @@ export default defineConfig({
                 text: '基于涂鸦的弱监督语义分割',
                 link: '/column/Paper/Scribbl_Hides_Class_Promoting_Scribble-Based_Weakly-Supervised_Semantic_Segmentation_with Its Class Label'
               },
-              {
-                text: '涂鸦监督语义分割的确定性和一致性(CC4S)',
-                link: '/column/Paper/CC4S Encouraging Certainty and Consistency in Scribble-Supervised Semantic Segmentation'
-              }
 
           ] 
       },
+      {
+        text: '语义分割论文阅读',
+	      collapsed: false,
+        items:[
+          {
+            text: '涂鸦监督语义分割的确定性和一致性(CC4S)',
+            link: '/column/Paper/CC4S Encouraging Certainty and Consistency in Scribble-Supervised Semantic Segmentation'
+          }
+
+
+
+
+        ]
+      }
     ],
     '/column/image_segmentation/': [
       {
