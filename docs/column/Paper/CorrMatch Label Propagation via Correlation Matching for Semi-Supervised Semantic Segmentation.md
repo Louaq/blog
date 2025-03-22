@@ -41,6 +41,13 @@ This paper presents a simple but performant semi-supervised semantic segmentatio
    - **动态阈值**：使用与训练过程相关的动态阈值策略，避免固定阈值过严或过松对模型收敛的不利影响。通过指数移动平均（EMA）根据对数似然输出迭代更新阈值。
    - **损失函数**：整体目标函数是监督损失和无监督损失的组合。监督损失是基本监督损失和监督相关损失的组合；无监督损失包括无监督硬损失、软损失和相关损失。
 
+
+::: tip
+
+**重要！！！**
+
+:::
+
 ## 实验（Compared with SOTA）
 
 
@@ -59,11 +66,7 @@ This paper presents a simple but performant semi-supervised semantic segmentatio
 
 
 
-: : : important
 
-重要！！！
-
-: : :
 
 ## 实验（Ablation Experiments）:1st_place_medal:
 
