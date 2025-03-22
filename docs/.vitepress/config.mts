@@ -155,6 +155,10 @@ export default defineConfig({
           {
             text: '涂鸦监督语义分割的确定性和一致性(CC4S)',
             link: '/column/Paper/CC4S Encouraging Certainty and Consistency in Scribble-Supervised Semantic Segmentation'
+          },
+          {
+            text: '基于关联匹配的标签传播半监督语义分割',
+            link: 'column/Paper/CorrMatch Label Propagation via Correlation Matching for Semi-Supervised Semantic Segmentation'
           }
 
 
