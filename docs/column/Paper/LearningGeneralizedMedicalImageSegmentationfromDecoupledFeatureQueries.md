@@ -1,5 +1,5 @@
 # Learning Generalized Medical Image Segmentation from Decoupled Feature Queries
-
+<ArticleMetadata/>
 Jarvis Research Center、Wuhan University、Guangxi Medical University
 
 ## 摘要

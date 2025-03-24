@@ -1,5 +1,5 @@
 # CC4S Encouraging Certainty and Consistency in Scribble-Supervised Semantic Segmentation
-
+<ArticleMetadata/>
 Peking University、Shandong Universit
 
 ## 摘要

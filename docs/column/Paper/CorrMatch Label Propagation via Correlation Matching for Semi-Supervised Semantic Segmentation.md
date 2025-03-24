@@ -1,5 +1,5 @@
 # CorrMatch: Label Propagation via Correlation Matching for Semi-Supervised Semantic Segmentation
-
+<ArticleMetadata/>
 Nankai University、NKIARI, Shenzhen Futian、SICE, UESTC
 
 ## 摘要

@@ -159,8 +159,11 @@ export default defineConfig({
           {
             text: '基于关联匹配的标签传播半监督语义分割',
             link: 'column/Paper/CorrMatch Label Propagation via Correlation Matching for Semi-Supervised Semantic Segmentation'
+          },
+          {
+            text: '基于LLM的开放词汇语义分割',
+            link: '/column/Paper/LLMFormer Large LanguageModel for Open-Vocabulary Semantic'
           }
-
 
 
 
