@@ -163,6 +163,10 @@ export default defineConfig({
           {
             text: '基于LLM的开放词汇语义分割',
             link: '/column/Paper/LLMFormer Large LanguageModel for Open-Vocabulary Semantic'
+          },
+          {
+            text: '无需语义标签的开放词汇语义分割(文章晦涩，不建议阅读)',
+            link: '/column/Paper/Towards Open-Vocabulary Semantic Segmentation Without Semantic Labels'
           }
 
 
