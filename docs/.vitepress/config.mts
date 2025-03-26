@@ -167,9 +167,20 @@ export default defineConfig({
           {
             text: '无需语义标签的开放词汇语义分割(文章晦涩，不建议阅读)',
             link: '/column/Paper/Towards Open-Vocabulary Semantic Segmentation Without Semantic Labels'
+          },
+          {
+            text: '面向开放词汇图像分割的通用片段嵌入',
+            link: '/column/Paper/USE Universal Segment Embeddings for Open-Vocabulary Image Segmentation'
           }
 
 
+
+
+
+
+
+
+          
 
         ]
       }
