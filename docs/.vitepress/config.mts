@@ -222,6 +222,10 @@ export default defineConfig({
             text: '卷积网络',
             link: '/column/image_segmentation/20250312-Pytorch教程'
           },
+          {
+            text: '分割算法(同济子豪兄)',
+            link: '/column/image_segmentation/segment algrothm'
+          }
 
         ]
 
