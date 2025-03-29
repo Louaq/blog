@@ -171,6 +171,10 @@ export default defineConfig({
           {
             text: '面向开放词汇图像分割的通用片段嵌入',
             link: '/column/Paper/USE Universal Segment Embeddings for Open-Vocabulary Image Segmentation'
+          },
+          {
+            text: '面向弱监督语义分割的类别标记注入',
+            link: '/column/Paper/Class Tokens Infusion for Weakly Supervised Semantic Segmentation'
           }
 
 
