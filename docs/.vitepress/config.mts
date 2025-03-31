@@ -175,16 +175,12 @@ export default defineConfig({
           {
             text: '面向弱监督语义分割的类别标记注入',
             link: '/column/Paper/Class Tokens Infusion for Weakly Supervised Semantic Segmentation'
+          },
+          {
+            text: '基于全局和局部注意力蒸馏的高效语义分割',
+            link: '/column/Paper/LGAD Local and Global Attention Distillation for Efficient Semantic Segmentation'
           }
 
-
-
-
-
-
-
-
-          
 
         ]
       }
