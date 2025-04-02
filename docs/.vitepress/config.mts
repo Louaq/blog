@@ -247,8 +247,8 @@ export default defineConfig({
         collapsed: true,
           items: [
               {
-                text: 'XXXXXXXXXXXXXXXXX',
-                link: '/column/Puruse/XXXXXXXXXXXXXXXXXX'
+                text: '精读模板',
+                link: '/column/Puruse/template'
               },
           ] 
       }
