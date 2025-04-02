@@ -179,6 +179,14 @@ export default defineConfig({
           {
             text: '基于全局和局部注意力蒸馏的高效语义分割',
             link: '/column/Paper/LGAD Local and Global Attention Distillation for Efficient Semantic Segmentation'
+          },
+          {
+            text: '基于双重语义度量学习的少样本航拍图像语义分割',
+            link: '/column/Paper/DSMF-Net Dual Semantic Metric Learning Fusion Network for Few-Shot Aerial Image Semantic Segmentation'
+          },
+          {
+            text: '基于剪枝的领域泛化语义分割',
+            link: '/column/Paper/Kill Two Birds with One Stone Domain Generalization for Semantic Segmentation via Network Pruning'
           }
 
 
