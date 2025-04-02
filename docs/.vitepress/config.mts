@@ -240,6 +240,18 @@ export default defineConfig({
 
       }
 
+    ],
+    '/column/Puruse/': [
+      {
+        text: '论文精读',
+        collapsed: true,
+          items: [
+              {
+                text: 'XXXXXXXXXXXXXXXXX',
+                link: '/column/Puruse/XXXXXXXXXXXXXXXXXX'
+              },
+          ] 
+      }
     ]
  
   },
