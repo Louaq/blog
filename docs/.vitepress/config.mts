@@ -244,7 +244,7 @@ export default defineConfig({
     '/column/Puruse/': [
       {
         text: '论文精读',
-        collapsed: true,
+        collapsed: false,
           items: [
               {
                 text: '精读模板',
