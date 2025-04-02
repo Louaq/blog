@@ -13,11 +13,7 @@ export const nav: DefaultTheme.NavItem[] = [
     link: '/column/Paper/' // 表示docs/index.md
   },
   {
-    text: 'Pytorch笔记',
+    text: '论文精读笔记',
     link: '/column/Pytorch/' // 表示docs/index.md
   },
-  {
-    text: '深度学习笔记',
-    link: '/column/deepLearning/' // 表示docs/index.md
-  }
 ];
