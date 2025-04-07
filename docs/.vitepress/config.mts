@@ -187,6 +187,10 @@ export default defineConfig({
           {
             text: '基于剪枝的领域泛化语义分割',
             link: '/column/Paper/Kill Two Birds with One Stone Domain Generalization for Semantic Segmentation via Network Pruning'
+          },
+          {
+            text: '基于全对一致性学习的弱监督语义分割',
+            link: '/column/Paper/All-pairs Consistency Learning for Weakly Supervised Semantic Segmentation'
           }
 
 
