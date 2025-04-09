@@ -191,8 +191,11 @@ export default defineConfig({
           {
             text: '基于全对一致性学习的弱监督语义分割',
             link: '/column/Paper/All-pairs Consistency Learning for Weakly Supervised Semantic Segmentation'
+          },
+          {
+            text: 'weakCLIP',
+            link: '/column/Paper/WeakCLIP Adapting CLIP for Weakly-Supervised Semantic'
           }
-
 
         ]
       }
