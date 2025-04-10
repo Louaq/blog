@@ -195,6 +195,10 @@ export default defineConfig({
           {
             text: 'weakCLIP',
             link: '/column/Paper/WeakCLIP Adapting CLIP for Weakly-Supervised Semantic'
+          },
+          {
+            text: '弱监督语义分割中的共享权重校准(Shared Feature Calibration, SFC)',
+            link: '/column/Paper/SFC: Shared Feature Calibration in Weakly Supervised Semantic Segmentation'
           }
 
         ]
