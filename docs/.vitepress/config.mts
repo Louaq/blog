@@ -199,6 +199,10 @@ export default defineConfig({
           {
             text: '弱监督语义分割中的共享权重校准',
             link: '/column/Paper/SFC Shared Feature Calibration in Weakly Supervised Semantic Segmentation'
+          },
+          {
+            text: '基于模拟图像间擦除知识迁移的弱监督语义分割',
+            link: '/column/Paper/Knowledge Transfer with Simulated Inter-Image Erasing for Weakly Supervised Semantic Segmentation'
           }
 
         ]
