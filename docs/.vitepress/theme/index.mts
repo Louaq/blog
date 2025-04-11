@@ -33,8 +33,8 @@ export default {
     app.component('notice', notice)
     app.component('backtotop', backtotop)
     app.component('ArticleMetadata' , ArticleMetadata)
-    app.component('MouseClick', MouseClick) //鼠标跟随组件
-    app.component('MouseFollower', MouseFollower) //鼠标跟随组件
+    //app.component('MouseClick', MouseClick) //鼠标跟随组件
+    //app.component('MouseFollower', MouseFollower) //鼠标跟随组件
 
     if (inBrowser){
       NProgress.configure({ showSpinner: false })

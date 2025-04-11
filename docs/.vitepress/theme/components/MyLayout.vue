@@ -45,10 +45,6 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 
 <template>
   <DefaultTheme.Layout>
-    <template #layout-top>
-      <MouseFollower />
-      
-    </template>
     
     <template #doc-footer-before>
       <backtotop />
