@@ -4,7 +4,7 @@
 
 <ArticleMetadata/>
 
-::: note
+::: tip
 
 CLIP、弱监督语义分割
 
