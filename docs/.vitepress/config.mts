@@ -203,6 +203,10 @@ export default defineConfig({
           {
             text: '基于模拟图像间擦除知识迁移的弱监督语义分割',
             link: '/column/Paper/Knowledge Transfer with Simulated Inter-Image Erasing for Weakly Supervised Semantic Segmentation'
+          },
+          {
+            text: '基于原型的像素级再分类提高弱监督语义分割',
+            link: '/column/Paper/Pixel-Wise Reclassification with Prototypes for Enhancing Weakly Supervised Semantic Segmentation'
           }
 
         ]
