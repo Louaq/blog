@@ -207,6 +207,10 @@ export default defineConfig({
           {
             text: '基于原型的像素级再分类提高弱监督语义分割',
             link: '/column/Paper/Pixel-Wise Reclassification with Prototypes for Enhancing Weakly Supervised Semantic Segmentation'
+          },
+          {
+            text: 'C-CAM',
+            link: '/column/Paper/C-CAM Causal CAM for Weakly Supervised Semantic Segmentation on Medical Image'
           }
 
         ]
