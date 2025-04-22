@@ -211,6 +211,10 @@ export default defineConfig({
           {
             text: 'C-CAM',
             link: '/column/Paper/C-CAM Causal CAM for Weakly Supervised Semantic Segmentation on Medical Image'
+          },
+          {
+            text: '医学图像分割：Rolling-Net',
+            link: '/column/Paper/Rolling-Unet Revitalizing MLP Ability to Efficiently Extract Long-Distance Dependencies for Medical Image Segmentation'
           }
 
         ]
