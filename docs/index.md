@@ -16,7 +16,7 @@ hero:
     tagline: The sky is dead, the yellow sky is standing
     image:
         # 首页右边的图片
-        src: /logo.png
+        src: /b1.png
         # 图片的描述
         alt: avatar
     # 按钮相关

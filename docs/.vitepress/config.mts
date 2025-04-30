@@ -67,7 +67,7 @@ export default defineConfig({
   },
   themeConfig: {
     darkModeSwitchLabel: '深浅模式',
-    logo: '/b.jpg',
+    logo: '/b1.png',
     nav: nav,
 	sidebarMenuLabel:'目录',
 	returnToTopLabel:'返回顶部',
